@@ -1,0 +1,66 @@
+[
+ {
+  "id": "6af504937fb9e9827af67665",
+  "nombre": "Sudadera Capucha Joya de la corona!",
+  "precio": 650,
+  "moneda": "MXN",
+  "imagen": "https://res.cloudinary.com/ninogamermx/image/upload/v1794442389/products_production/6af504937fb9e9827af67665.jpg",
+  "url": "https://ninogamer.com/productos/6af504937fb9e9827af67665"
+ },
+ {
+  "id": "6af503ef7fb9e9827af67664",
+  "nombre": "Sudadera Joya de la corona!",
+  "precio": 550,
+  "moneda": "MXN",
+  "imagen": "https://res.cloudinary.com/ninogamermx/image/upload/v1794442225/products_production/6af503ef7fb9e9827af67664.jpg",
+  "url": "https://ninogamer.com/productos/6af503ef7fb9e9827af67664"
+ },
+ {
+  "id": "6af503ab7fb9e9827af67663",
+  "nombre": "Playera Joya de la corona!",
+  "precio": 365,
+  "moneda": "MXN",
+  "imagen": "https://res.cloudinary.com/ninogamermx/image/upload/v1794442157/products_production/6af503ab7fb9e9827af67663.jpg",
+  "url": "https://ninogamer.com/productos/6af503ab7fb9e9827af67663"
+ },
+ {
+  "id": "6af5033cd8bba44102efd90f",
+  "nombre": "Sudadera Juegazo!",
+  "precio": 550,
+  "moneda": "MXN",
+  "imagen": "https://res.cloudinary.com/ninogamermx/image/upload/v1794442047/products_production/6af5033cd8bba44102efd90f.jpg",
+  "url": "https://ninogamer.com/productos/6af5033cd8bba44102efd90f"
+ },
+ {
+  "id": "6af503037fb9e9827af67662",
+  "nombre": "Sudadera Capucha Juegazo!",
+  "precio": 650,
+  "moneda": "MXN",
+  "imagen": "https://res.cloudinary.com/ninogamermx/image/upload/v1794441990/products_production/6af503037fb9e9827af67662.jpg",
+  "url": "https://ninogamer.com/productos/6af503037fb9e9827af67662"
+ },
+ {
+  "id": "6af5026f7fb9e9827af67661",
+  "nombre": "Playera Juegazo!",
+  "precio": 365,
+  "moneda": "MXN",
+  "imagen": "https://res.cloudinary.com/ninogamermx/image/upload/v1794441841/products_production/6af5026f7fb9e9827af67661.jpg",
+  "url": "https://ninogamer.com/productos/6af5026f7fb9e9827af67661"
+ },
+ {
+  "id": "6af4ff6fd8bba44102efd90d",
+  "nombre": "Lumichan Sailor Manga Capucha",
+  "precio": 650,
+  "moneda": "MXN",
+  "imagen": "https://res.cloudinary.com/ninogamermx/image/upload/v1794441072/products_production/6af4ff6fd8bba44102efd90d.jpg",
+  "url": "https://ninogamer.com/productos/6af4ff6fd8bba44102efd90d"
+ },
+ {
+  "id": "6af4ff00d8bba44102efd90c",
+  "nombre": "Lumichan Sailor Manga Sudadera",
+  "precio": 550,
+  "moneda": "MXN",
+  "imagen": "https://res.cloudinary.com/ninogamermx/image/upload/v1794440961/products_production/6af4ff00d8bba44102efd90c.jpg",
+  "url": "https://ninogamer.com/productos/6af4ff00d8bba44102efd90c"
+ }
+]

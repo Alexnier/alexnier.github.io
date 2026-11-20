@@ -11,8 +11,10 @@
      (no quitarla mientras se use la app de TikTok). El horario se calcula en el navegador desde la hora base (6:00 PM de Tijuana). -->
 </head><body><div class="envoltura"><div class="kana">アレクスニエル</div>
 <header><a href="index.html"><img src="img/logo.png" alt="ALEXNIER · アレクスニエル · Retro & Modern Gaming"></a>
- <nav><a href="#horario">Horario</a><a href="#directos">Directos</a><a href="#resenas">Reseñas</a><a href="#redes">Redes</a><a href="#apoyo">Apoya</a><a href="#lumichan">Lumichan</a></nav></header>
+ <nav><a href="#horario">Horario</a><a href="#directos">Directos</a><a href="#lumi">Lumi</a><a href="#tienda">Tienda</a><a href="#resenas">Reseñas</a><a href="#redes">Redes</a><a href="#apoyo">Apoya</a><a href="#lumichan">Lumichan</a></nav></header>
 
+<a class="envivo" id="envivo" hidden href="https://www.youtube.com/@ALEXNIER/live"><i class="punto"></i><b>En vivo ahora</b><span id="envivo-t"></span><em>▶ Ver</em></a>
+<!-- 20 nov 2026: vivo.json (lo actualiza GitHub cada 10 min, actualizar_directos.py) dice si ALEXNIER está en vivo -->
 <div class="hero">
  <div class="txt">
   <span class="cinta osc"><i class="punto"></i>Directos en YouTube <small>ライブ</small></span>
@@ -30,7 +32,7 @@
 </section>
 
 <section id="directos">
- <h2><span class="cinta osc"><i class="punto"></i>Directos recientes <small>ライブ</small></span></h2>
+ <h2><span class="cinta osc"><i class="punto"></i><span id="dir-t">Directos recientes</span> <small>ライブ</small></span></h2>
  <!-- 20 nov 2026 (idea de Vick): el reproductor usa la lista automática de directos del canal (UULV + id del canal): YouTube la
       actualiza sola, el más reciente va primero. Las series son las listas de reproducción por juego (se agregan a mano aquí). -->
  <div class="directos">
@@ -62,6 +64,36 @@
   } catch (e) { caja.previousElementSibling.previousElementSibling.remove(); caja.previousElementSibling.remove(); caja.remove(); }
  })();
  </script>
+</section>
+
+<section id="lumi">
+ <h2><span class="cinta osc">Conoce a Lumi <small>ルミ</small></span></h2>
+ <!-- 20 nov 2026: quién es Lumi y qué le puede pedir el chat (los comandos de integrations/ayudante.py del bot) -->
+ <div class="conoce">
+  <img class="lumi-gb" src="img/lumi-gameboy.webp" alt="Lumi sentada jugando con un Game Boy" loading="lazy">
+  <div class="papel ficha">
+   <h3>Mi co-presentadora</h3>
+   <p><b>Lumi</b> (Rumi Kisaragi) es una chica de 21 años que se quedó en la red en noviembre de 1998. Ama el City Pop, Final Fantasy VII y Evangelion, es sarcástica con cariño y está en cada directo: platica con el chat, me molesta cuando muero y hace de todo para que el directo esté vivo.</p>
+   <h4>Lo que le puedes pedir en el chat</h4>
+   <ul class="cmds">
+    <li><code>lumi di: …</code><span>Lo repite en voz (con filtro, ¡pórtense bien!)</span></li>
+    <li><code>1 · 2 · 3 · 4</code><span>Vota en sus encuestas</span></li>
+    <li><code>!clip</code><span>Marca un momento para los clips</span></li>
+    <li><code>!pregunta …</code><span>Una pregunta para mí; Lumi me la lee</span></li>
+    <li><code>!muerte · !vencido</code><span>Cuenta mis muertes y jefes en pantalla</span></li>
+    <li><code>!cantar</code><span>Lumi canta</span></li>
+    <li><code>!comandos</code><span>Todo lo demás</span></li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<section id="tienda">
+ <h2><span class="cinta mor">Tienda <small>ショップ</small></span></h2>
+ <!-- 20 nov 2026: tienda.json (los productos más nuevos de Niño Gamer; lo actualiza GitHub cada 10 min). Si no carga, quedan el texto y el botón. -->
+ <p class="intro">Playeras y sudaderas del canal en <b>Niño Gamer</b>, con envíos a todo México.</p>
+ <div class="productos" id="productos"></div>
+ <a class="boton" href="https://ninogamer.com/creadores/gameeffectmx">Ver toda la tienda</a>
 </section>
 
 <section id="resenas">
@@ -117,7 +149,6 @@
  <h2><span class="cinta mor">Apoya al canal <small>サポート</small></span></h2>
  <div class="tarjetas">
   <div class="tarjeta papel"><h3>Ko-fi</h3><p>Contenido gratis de Lumi y, si quieres, un tip de $1 al mes. Tu apoyo hace posible el canal.</p><a class="boton" href="https://ko-fi.com/alexnier">Apoyar</a></div>
-  <div class="tarjeta papel"><h3>Tienda</h3><p>Playeras y sudaderas en Niño Gamer, con envíos a todo México.</p><a class="boton" href="https://ninogamer.com/creadores/gameeffectmx">Ver la tienda</a></div>
   <div class="tarjeta papel"><h3>Game Effect</h3><p>La revista digital de videojuegos de México: reseñas, noticias, retro y entrevistas.</p><a class="boton" href="https://gameeffect.com.mx">Leerla gratis</a></div>
  </div>
 </section>
@@ -149,4 +180,27 @@
  for(const [n,tz] of ZONAS)html.push(`<div class="zona papel${tz===mia?" tuya":""}"><small>${tz===mia?"TU HORA · ":""}${n}</small><b>${hora(tz)}</b></div>`);
  caja.innerHTML=html.join("");
 })();
-</script></body></html>
+</script><script>
+/* 20 nov 2026: en vivo (vivo.json) y productos de la tienda (tienda.json); los actualiza GitHub cada 10 min */
+(async () => {
+ try {
+  const v = await (await fetch('vivo.json', { cache: 'no-cache' })).json();
+  if (v.vivo && v.id) {
+   const a = document.getElementById('envivo'); a.hidden = false; a.href = 'https://www.youtube.com/watch?v=' + v.id;
+   document.getElementById('envivo-t').textContent = v.titulo || '';
+   const f = document.querySelector('.tele iframe'); if (f) f.src = 'https://www.youtube-nocookie.com/embed/' + v.id;
+   document.getElementById('dir-t').textContent = 'En vivo ahora';
+  }
+ } catch (e) {}
+ try {
+  const xs = await (await fetch('tienda.json', { cache: 'no-cache' })).json(), caja = document.getElementById('productos');
+  for (const p of xs.slice(0, 4)) {
+   const a = document.createElement('a'); a.className = 'prod papel'; a.href = p.url;
+   a.innerHTML = '<img alt="" loading="lazy"><b></b><span></span>';
+   a.querySelector('img').src = p.imagen; a.querySelector('b').textContent = p.nombre;
+   a.querySelector('span').textContent = '$' + p.precio + ' ' + (p.moneda || 'MXN'); caja.appendChild(a);
+  }
+ } catch (e) {}
+})();
+</script>
+</body></html>
