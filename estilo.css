@@ -47,7 +47,7 @@ section h2{display:flex;align-items:center;gap:14px;margin-bottom:22px}
 .red{display:flex;align-items:center;gap:14px;padding:14px 16px;text-decoration:none;transition:transform .15s}
 .red:hover{transform:translate(-2px,-2px)}
 .red .ic{width:46px;height:46px;flex:none;display:grid;place-items:center;border-radius:10px;background:var(--tinta);color:#fff;font:400 1.4rem var(--f-titulo);border:2px solid var(--lavanda)}
-.red b{display:block;font:400 1.3rem/1.1 var(--f-titulo);text-transform:uppercase;color:#fff}.red span{font-size:.85rem}
+.red b{display:block;font:400 1.3rem/1.1 var(--f-titulo);text-transform:uppercase;color:#fff}.red span{font-size:.85rem;overflow-wrap:anywhere}.red div{min-width:0}
 .tarjetas{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
 .tarjeta{padding:22px;display:flex;flex-direction:column;gap:12px;align-items:flex-start}
 .tarjeta h3{font:400 2rem/1 var(--f-titulo);text-transform:uppercase}
@@ -61,4 +61,19 @@ footer a{margin-left:14px}
 /* páginas de texto (términos, privacidad) */
 .doc{max-width:780px;padding:28px}.doc h1{font:400 clamp(40px,7vw,70px)/1 var(--f-titulo);text-transform:uppercase;color:var(--tinta);margin-bottom:14px}
 .doc h2{font:400 1.6rem var(--f-titulo);text-transform:uppercase;color:var(--morado);margin:22px 0 6px}.doc p,.doc li{color:#2a1846}.doc ul{padding-left:22px}.doc a{color:var(--morado)}
-@media (max-width:760px){.hero{grid-template-columns:1fr}.hero .lumi{max-height:440px;order:-1}.hero .txt{padding-bottom:0}header nav{gap:12px}.kana{display:none}}
+/* directos recientes y series (20 nov 2026) */
+.directos{display:grid;grid-template-columns:1.6fr 1fr;gap:22px;align-items:stretch}
+.tele{padding:10px;aspect-ratio:16/9}.tele iframe{width:100%;height:100%;border:0;border-radius:8px;display:block;background:#000}
+.todos{padding:22px;display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.todos h3{font:400 2rem/1 var(--f-titulo);text-transform:uppercase}.todos p{font-size:.95rem;color:#3a1566}
+h3.sub{margin:34px 0 16px;font:400 1.6rem var(--f-titulo);text-transform:uppercase;color:#fff;text-shadow:3px 3px 0 var(--morado)}
+h3.sub small{font:900 .6em var(--f-jp);color:var(--lavanda);margin-left:8px}
+.series{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:18px}
+.serie{display:flex;flex-direction:column;gap:8px;text-decoration:none;transition:transform .15s}
+.serie:hover{transform:translate(-2px,-2px)}
+.serie .mini{position:relative;display:block;aspect-ratio:16/9;overflow:hidden;border:4px solid var(--tinta);border-radius:12px;box-shadow:6px 6px 0 var(--morado)}
+.serie .mini img{width:100%;height:100%;object-fit:cover;display:block}
+.serie .mini i{position:absolute;left:8px;bottom:8px;padding:2px 8px 1px;font:400 .85rem var(--f-titulo);font-style:normal;letter-spacing:.04em;text-transform:uppercase;color:#fff;
+ background:var(--tinta);border:2px solid var(--lavanda);border-radius:6px}
+.serie b{font:400 1.15rem/1.1 var(--f-titulo);text-transform:uppercase;color:#fff}
+@media (max-width:760px){.directos{grid-template-columns:1fr}.series{grid-template-columns:repeat(2,1fr);gap:14px}.serie b{font-size:.95rem}.serie .mini i{font-size:.72rem;left:5px;bottom:5px}.hero{grid-template-columns:1fr}.hero .lumi{max-height:440px;order:-1}.hero .txt{padding-bottom:0}header nav{gap:12px}.kana{display:none}}
