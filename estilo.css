@@ -76,4 +76,21 @@ h3.sub small{font:900 .6em var(--f-jp);color:var(--lavanda);margin-left:8px}
 .serie .mini i{position:absolute;left:8px;bottom:8px;padding:2px 8px 1px;font:400 .85rem var(--f-titulo);font-style:normal;letter-spacing:.04em;text-transform:uppercase;color:#fff;
  background:var(--tinta);border:2px solid var(--lavanda);border-radius:6px}
 .serie b{font:400 1.15rem/1.1 var(--f-titulo);text-transform:uppercase;color:#fff}
-@media (max-width:760px){.directos{grid-template-columns:1fr}.series{grid-template-columns:repeat(2,1fr);gap:14px}.serie b{font-size:.95rem}.serie .mini i{font-size:.72rem;left:5px;bottom:5px}.hero{grid-template-columns:1fr}.hero .lumi{max-height:440px;order:-1}.hero .txt{padding-bottom:0}header nav{gap:12px}.kana{display:none}}
+/* reseñas en Game Effect (20 nov 2026) */
+p.intro{max-width:680px;margin:-6px 0 22px}
+.resenas{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:26px}
+.resena{display:flex;flex-direction:column;gap:8px}
+.resena .pag{position:relative;display:block;border:4px solid var(--tinta);border-radius:6px;box-shadow:8px 8px 0 var(--morado);transform:rotate(-1.2deg);transition:transform .2s}
+.resena:nth-child(even) .pag{transform:rotate(1.2deg)}
+.resena .pag:hover{transform:rotate(0) translate(-2px,-4px)}
+.resena .pag img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top}
+.nota{position:absolute;right:-14px;top:-14px;width:78px;height:78px;border-radius:50%;display:grid;place-items:center;text-align:center;
+ background:linear-gradient(180deg,#B565F5,var(--marca));color:#fff;border:4px solid var(--tinta);box-shadow:4px 4px 0 var(--tinta);
+ font:400 2rem/1 var(--f-titulo);transform:rotate(10deg);text-shadow:2px 2px 0 var(--tinta)}
+.nota.joya{background:#E8344E;font-size:.82rem;line-height:1.05;text-transform:uppercase;padding:6px}
+.resena .tipo{margin-top:12px;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--lavanda);font-weight:700}
+.resena h3{font:400 1.5rem/1.05 var(--f-titulo);text-transform:uppercase;color:#fff}
+.resena blockquote{font-size:.86rem;line-height:1.55;color:var(--lav-clara);border-left:3px solid var(--marca);padding-left:10px}
+.resena .mas{margin-top:auto;padding-top:6px;font:400 1rem var(--f-titulo);text-transform:uppercase;letter-spacing:.04em;color:#fff;text-decoration:none}
+.resena .mas:hover{color:var(--lavanda)}
+@media (max-width:760px){.resenas{grid-template-columns:repeat(2,1fr);gap:22px 16px}.resena .mas{font-size:.8rem;white-space:nowrap}.resena h3{font-size:1.15rem}.resena blockquote{font-size:.8rem}.nota{width:60px;height:60px;font-size:1.5rem;right:-8px;top:-10px}.nota.joya{font-size:.62rem}.directos{grid-template-columns:1fr}.series{grid-template-columns:repeat(2,1fr);gap:14px}.serie b{font-size:.95rem}.serie .mini i{font-size:.72rem;left:5px;bottom:5px}.hero{grid-template-columns:1fr}.hero .lumi{max-height:440px;order:-1}.hero .txt{padding-bottom:0}header nav{gap:12px}.kana{display:none}}
