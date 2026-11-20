@@ -36,22 +36,32 @@
  <div class="directos">
   <div class="tele panel"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=UULVCdCqcU1KpL0PyVr63vOMlw" title="Directos recientes de ALEXNIER"
    loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
-  <div class="todos papel"><h3>¿Te perdiste uno?</h3><p>Todos los directos se quedan en el canal. Empieza por el más reciente o por la serie del juego que te guste.</p>
+  <div class="todos papel"><h3>¿Te perdiste uno?</h3><p>Todos los directos se quedan en el canal. Aquí arriba está el más reciente y abajo los anteriores; en el canal están todos.</p>
    <a class="boton" href="https://www.youtube.com/@ALEXNIER/streams">▶ Todos los directos</a></div>
  </div>
- <h3 class="sub">Series completas <small>シリーズ</small></h3>
- <div class="series">
-  <a class="serie" href="https://www.youtube.com/playlist?list=PLvG3ZxZ2m2nFFYLTh8Syzi9nKEAP10i4d"><span class="mini"><img src="https://i.ytimg.com/vi/Xv3I3euft50/hqdefault.jpg" alt="" loading="lazy"><i>▶ 17 directos</i></span><b>Final Fantasy VII Rebirth</b></a>
-  <a class="serie" href="https://www.youtube.com/playlist?list=PLvG3ZxZ2m2nFtJbH1LBlWmYT3_6tJzjgk"><span class="mini"><img src="https://i.ytimg.com/vi/aOVoz3WEKk8/hqdefault.jpg" alt="" loading="lazy"><i>▶ 7 directos</i></span><b>Stellar Blade</b></a>
-  <a class="serie" href="https://www.youtube.com/playlist?list=PLaAVRnIkjmGQ"><span class="mini"><img src="https://i.ytimg.com/vi/ZamJEh_18mo/hqdefault.jpg" alt="" loading="lazy"><i>▶ 2 directos</i></span><b>Bloodborne</b></a>
-  <a class="serie" href="https://www.youtube.com/playlist?list=PLvG3ZxZ2m2nGUcNJmwpebgTgR4FHyLvaX"><span class="mini"><img src="https://i.ytimg.com/vi/sxwpk77J-kU/hqdefault.jpg" alt="" loading="lazy"><i>▶ 2 directos</i></span><b>Resident Evil Requiem</b></a>
-  <a class="serie" href="https://www.youtube.com/playlist?list=PLvG3ZxZ2m2nG6-wlaoaewE9EVtrOnue5I"><span class="mini"><img src="https://i.ytimg.com/vi/40PDnXtTkTc/hqdefault.jpg" alt="" loading="lazy"><i>▶ 2 directos</i></span><b>Zelda: Twilight Princess</b></a>
-  <a class="serie" href="https://www.youtube.com/playlist?list=PLvG3ZxZ2m2nEyPxeAB7xs13beKq8ujpOJ"><span class="mini"><img src="https://i.ytimg.com/vi/kK-TOd7wAu8/hqdefault.jpg" alt="" loading="lazy"><i>▶ 1 directo</i></span><b>Dragon Ball: Sparking! Zero</b></a>
-  <a class="serie" href="https://www.youtube.com/playlist?list=PLvG3ZxZ2m2nHlXJWHltdBKXSxuGYCl54T"><span class="mini"><img src="https://i.ytimg.com/vi/q00m4E7Iwt4/hqdefault.jpg" alt="" loading="lazy"><i>▶ 1 directo</i></span><b>Final Fantasy Crystal Chronicles</b></a>
-  <a class="serie" href="https://www.youtube.com/playlist?list=PLvG3ZxZ2m2nHrNPhJGLyFFM8ddb95D1G5"><span class="mini"><img src="https://i.ytimg.com/vi/yIGahSL_9iQ/hqdefault.jpg" alt="" loading="lazy"><i>▶ 1 directo</i></span><b>Resident Evil 2</b></a>
-  <a class="serie" href="https://www.youtube.com/playlist?list=PLvG3ZxZ2m2nHputiyXS96vj18AW3Sv3_R"><span class="mini"><img src="https://i.ytimg.com/vi/oS6meyQVorA/hqdefault.jpg" alt="" loading="lazy"><i>▶ 1 directo</i></span><b>Zelda: Majora&#x27;s Mask</b></a>
-  <a class="serie" href="https://www.youtube.com/playlist?list=PLvG3ZxZ2m2nFBzWg4pE_j79sYdoB5MdFC"><span class="mini"><img src="https://i.ytimg.com/vi/mskIQkTZgK0/hqdefault.jpg" alt="" loading="lazy"><i>▶ 1 directo</i></span><b>Metal Gear Solid</b></a>
- </div>
+ <h3 class="sub">Directos anteriores <small>アーカイブ</small></h3>
+ <!-- directos.json lo actualiza GitHub cada hora (actualizar_directos.py + .github/workflows/directos.yml); aquí van del 2.º al
+      9.º (el 1.º ya está en el reproductor). Si no carga, se esconde la sección. -->
+ <div class="series" id="anteriores"></div>
+ <script>
+ (async () => {
+  const caja = document.getElementById('anteriores');
+  try {
+   const xs = (await (await fetch('directos.json', { cache: 'no-cache' })).json()).slice(1, 9);
+   const fecha = f => { const d = new Date(f + 'T12:00:00'), h = Math.round((Date.now() - d) / 864e5);
+     return h <= 0 ? 'hoy' : h === 1 ? 'ayer' : h < 7 ? 'hace ' + h + ' días' : d.toLocaleDateString('es-MX', { day: 'numeric', month: 'short' }); };
+   for (const x of xs) {
+    const a = document.createElement('a'); a.className = 'serie'; a.href = 'https://www.youtube.com/watch?v=' + x.id;
+    a.innerHTML = '<span class="mini"><img alt="" loading="lazy"><i></i></span><small></small><b></b>';
+    a.querySelector('img').src = 'https://i.ytimg.com/vi/' + x.id + '/hqdefault.jpg';
+    a.querySelector('i').textContent = '▶ ' + fecha(x.fecha);
+    a.querySelector('small').textContent = x.juego; a.querySelector('b').textContent = x.gancho;
+    caja.appendChild(a);
+   }
+   if (!xs.length) throw 0;
+  } catch (e) { caja.previousElementSibling.previousElementSibling.remove(); caja.previousElementSibling.remove(); caja.remove(); }
+ })();
+ </script>
 </section>
 
 <section id="resenas">
