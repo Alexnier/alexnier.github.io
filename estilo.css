@@ -1,0 +1,64 @@
+/* ALEXNIER · sitio (20 nov 2026), estilo «Canal 404»: el mismo sistema de los overlays v7 y de Lumi Studio
+   (studio/html/sistema/marca.css + c404.css): CEL (contorno de tinta + sombra dura), PAPEL, CINTAS moradas, TRAMA de puntos.
+   Más morado que rosa. Letras: Anton (títulos), Space Mono (datos), Zen Kaku Gothic New (japonés). */
+:root{--noche:#0D0716;--tinta:#12061F;--morado:#6B2FB0;--marca:#9B4DE0;--lavanda:#C46BFF;--lav-clara:#E7C2FF;--papel:#FFF3FC;--rec:#FF5A8A;
+ --f-titulo:'Anton',Impact,sans-serif;--f-dato:'Space Mono',ui-monospace,monospace;--f-jp:'Zen Kaku Gothic New','Noto Sans JP',sans-serif;color-scheme:dark}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--noche)}
+body{min-height:100vh;color:var(--lav-clara);font:16px/1.6 var(--f-dato);overflow-x:hidden;
+ background:radial-gradient(ellipse 80% 60% at 85% 0,#4a1d82 0,#24103f 40%,transparent 75%),radial-gradient(ellipse 70% 50% at 0 100%,#3a1566 0,transparent 70%),var(--noche)}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle,var(--marca) 34%,transparent 36%) 0 0/18px 18px;opacity:.28;
+ -webkit-mask:radial-gradient(ellipse 60% 45% at 100% 0,#000,transparent 70%);mask:radial-gradient(ellipse 60% 45% at 100% 0,#000,transparent 70%)}
+a{color:var(--lav-clara)}
+.envoltura{max-width:1100px;margin:0 auto;padding:28px 20px 60px;position:relative}
+.kana{position:absolute;right:-20px;top:40px;font:900 clamp(80px,14vw,190px)/1 var(--f-jp);writing-mode:vertical-rl;color:transparent;-webkit-text-stroke:2px rgba(231,194,255,.13);pointer-events:none;z-index:0}
+/* piezas */
+.cinta{display:inline-flex;align-items:center;gap:.45em;padding:.16em .65em .1em;font:400 1.15rem/1.1 var(--f-titulo);text-transform:uppercase;letter-spacing:.03em;color:#fff;
+ border:3px solid var(--tinta);white-space:nowrap}
+.cinta.osc{background:var(--tinta);box-shadow:5px 5px 0 var(--marca);transform:rotate(-2.5deg)}
+.cinta.mor{background:linear-gradient(180deg,#B565F5,var(--marca));box-shadow:5px 5px 0 var(--tinta);transform:rotate(-1.5deg);text-shadow:.05em .05em 0 var(--tinta)}
+.cinta small{font:900 .7em var(--f-jp);color:var(--lav-clara)}
+.punto{width:.5em;height:.5em;border-radius:50%;background:var(--rec);box-shadow:0 0 .5em var(--rec)}
+.titulo{font:400 clamp(56px,10vw,118px)/.9 var(--f-titulo);text-transform:uppercase;letter-spacing:.005em}
+.titulo span{display:block;width:fit-content;color:#fff;-webkit-text-stroke:.045em var(--tinta);paint-order:stroke fill;
+ text-shadow:.02em .02em 0 var(--tinta),.04em .04em 0 #261040,.06em .06em 0 #3a1862,.08em .08em 0 #4c2080,.1em .1em 0 var(--tinta)}
+.titulo .l2{color:var(--lav-clara)}
+.papel{background:var(--papel);color:var(--tinta);border:4px solid var(--tinta);border-radius:14px;box-shadow:8px 8px 0 var(--morado)}
+.panel{background:linear-gradient(165deg,#2b1250,#160a2a);border:4px solid var(--tinta);border-radius:14px;box-shadow:inset 0 0 0 2px rgba(196,107,255,.45),7px 7px 0 var(--morado)}
+/* cabecera */
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;position:relative;z-index:2}
+header img{height:56px;filter:drop-shadow(4px 4px 0 var(--tinta))}
+header nav{display:flex;gap:18px;flex-wrap:wrap}header nav a{font:400 1.05rem var(--f-titulo);text-transform:uppercase;letter-spacing:.04em;text-decoration:none}
+header nav a:hover{color:#fff}
+/* portada */
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:end;margin-top:28px;position:relative;z-index:1}
+.hero .txt{display:flex;flex-direction:column;align-items:flex-start;gap:20px;padding-bottom:40px}
+.hero p{max-width:560px;font-size:1.02rem}
+.hero .lumi{width:100%;max-height:640px;object-fit:contain;object-position:bottom;filter:drop-shadow(4px 0 0 #fff) drop-shadow(-4px 0 0 #fff) drop-shadow(0 -4px 0 #fff)
+ drop-shadow(5px 0 0 var(--tinta)) drop-shadow(-5px 0 0 var(--tinta)) drop-shadow(0 -5px 0 var(--tinta)) drop-shadow(-16px 12px 0 rgba(107,47,176,.85))}
+.zonas{display:flex;flex-wrap:wrap;gap:10px}
+.zona{padding:8px 14px 9px;min-width:118px}.zona small{display:block;font-size:.72rem;letter-spacing:.1em;color:var(--marca);font-weight:700}
+.zona b{display:block;font:400 1.7rem/1 var(--f-titulo)}
+.zona.tuya{background:linear-gradient(180deg,#B565F5,var(--marca));color:#fff}.zona.tuya small{color:var(--lav-clara)}
+/* secciones */
+section{margin-top:64px;position:relative;z-index:1}
+section h2{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.redes{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.red{display:flex;align-items:center;gap:14px;padding:14px 16px;text-decoration:none;transition:transform .15s}
+.red:hover{transform:translate(-2px,-2px)}
+.red .ic{width:46px;height:46px;flex:none;display:grid;place-items:center;border-radius:10px;background:var(--tinta);color:#fff;font:400 1.4rem var(--f-titulo);border:2px solid var(--lavanda)}
+.red b{display:block;font:400 1.3rem/1.1 var(--f-titulo);text-transform:uppercase;color:#fff}.red span{font-size:.85rem}
+.tarjetas{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.tarjeta{padding:22px;display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.tarjeta h3{font:400 2rem/1 var(--f-titulo);text-transform:uppercase}
+.tarjeta p{font-size:.95rem;color:#3a1566}
+.boton{display:inline-block;margin-top:auto;padding:10px 18px 8px;font:400 1.1rem var(--f-titulo);text-transform:uppercase;letter-spacing:.04em;color:#fff;text-decoration:none;
+ background:linear-gradient(180deg,#B565F5,var(--marca));border:3px solid var(--tinta);box-shadow:4px 4px 0 var(--tinta)}
+.boton:hover{transform:translate(-1px,-1px);box-shadow:5px 5px 0 var(--tinta)}
+.lumichan{padding:24px}.lumichan p{margin-top:10px}
+footer{margin-top:64px;padding-top:20px;border-top:3px solid var(--tinta);box-shadow:0 -2px 0 rgba(196,107,255,.35);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.85rem;color:#9B8BC0;position:relative;z-index:1}
+footer a{margin-left:14px}
+/* páginas de texto (términos, privacidad) */
+.doc{max-width:780px;padding:28px}.doc h1{font:400 clamp(40px,7vw,70px)/1 var(--f-titulo);text-transform:uppercase;color:var(--tinta);margin-bottom:14px}
+.doc h2{font:400 1.6rem var(--f-titulo);text-transform:uppercase;color:var(--morado);margin:22px 0 6px}.doc p,.doc li{color:#2a1846}.doc ul{padding-left:22px}.doc a{color:var(--morado)}
+@media (max-width:760px){.hero{grid-template-columns:1fr}.hero .lumi{max-height:440px;order:-1}.hero .txt{padding-bottom:0}header nav{gap:12px}.kana{display:none}}
