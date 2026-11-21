@@ -1,11 +1,19 @@
 [
  {
+  "id": "nMcMfGneD1c",
+  "titulo": "Final Fantasy VII Rebirth | Decidimos el DESTINO 🌌",
+  "juego": "Final Fantasy VII Rebirth",
+  "gancho": "Decidimos el DESTINO 🌌",
+  "fecha": "2026-11-21",
+  "vistas": 20
+ },
+ {
   "id": "Xv3I3euft50",
   "titulo": "Final Fantasy VII Rebirth | A un Paso del FINAL 🌌",
   "juego": "Final Fantasy VII Rebirth",
   "gancho": "A un Paso del FINAL 🌌",
   "fecha": "2026-11-20",
-  "vistas": 111
+  "vistas": 114
  },
  {
   "id": "AVMYG3dqflI",
@@ -13,7 +21,7 @@
   "juego": "Final Fantasy VII Rebirth",
   "gancho": "Salimos al ESCENARIO 🎭",
   "fecha": "2026-11-19",
-  "vistas": 77
+  "vistas": 78
  },
  {
   "id": "fplGjdCNJgk",
@@ -110,13 +118,5 @@
   "gancho": "PESADILLA EN ALTESS LEVOIRE 🚔☣️",
   "fecha": "2026-05-21",
   "vistas": 93
- },
- {
-  "id": "Ju3G80OCtAU",
-  "titulo": "GODZILLA: DAMM | LA LUCHA POR EL TRONO... 🚨🦖",
-  "juego": "GODZILLA: DAMM",
-  "gancho": "LA LUCHA POR EL TRONO... 🚨🦖",
-  "fecha": "2026-05-13",
-  "vistas": 123
  }
 ]
