@@ -72,7 +72,8 @@
 <section id="lumi">
  <h2><span class="cinta osc">Conoce a Lumi <small>ルミ</small></span></h2>
  <!-- 20 nov 2026: quién es Lumi y qué le puede pedir el chat (los comandos de integrations/ayudante.py del bot).
-      21 nov 2026: + apuestas, trivia, rachas, cumpleaños y canjes (integrations/publico.py). La misma lista va en «!comandos»
+      21 nov 2026: + apuestas, trivia, rachas, cumpleaños y canjes (integrations/publico.py); en la tarde + bingo, duelo, adivina,
+      ppt, voto, top y meta (integrations/comunidad.py). La misma lista va en «!comandos»
       del bot (commands/handler.py): si cambias una, cambia la otra. -->
  <div class="conoce">
   <img class="lumi-gb" src="img/lumi-agenda.webp" alt="Lumi pensando con su agenda en la mano" loading="lazy">
@@ -92,10 +93,30 @@
     <li><code>!racha</code><span>Cuántos directos seguidos llevas; Lumi celebra a los fieles</span></li>
     <li><code>!cumple 3 de mayo</code><span>Lumi te festeja en tu día, con regalo</span></li>
     <li><code>!canjes</code><span>Gasta tus monedas: un grito en pantalla, un apodo para el jefe o una encuesta</span></li>
+    <li><code>!bingo</code><span>Tu cartón del directo: Lumi lo va tachando sola</span></li>
+    <li><code>!duelo @alguien 50</code><span>Reta a alguien por monedas (acepta con <b>!acepto</b>)</span></li>
+    <li><code>!adivina</code><span>Lumi da pistas de un juego de los 90; el primero que atine gana</span></li>
+    <li><code>!ppt piedra</code><span>Piedra, papel o tijera contra Lumi</span></li>
+    <li><code>!voto 2</code><span>Vota el juego del próximo directo (cuando haya votación)</span></li>
+    <li><code>!top · !meta</code><span>El top del mes y la meta de mensajes del directo</span></li>
     <li><code>!cantar</code><span>Lumi canta</span></li>
     <li><code>!comandos</code><span>Todo lo demás</span></li>
    </ul>
   </div>
+ </div>
+</section>
+
+<section id="fieles" hidden>
+ <h2><span class="cinta mor">Fieles del chat <small>常連</small></span></h2>
+ <!-- 21 nov 2026: tablero.json = GET :8765/tablero del bot (integrations/comunidad.tablero): rachas, top del mes, cumpleaños del
+      mes y la votación del próximo juego. Lo baja la PC cada 30 min (~/.local/bin/tablero-pagina.sh, timer de usuario
+      «tablero-pagina») y lo sube solo si cambió. Si no hay datos, la sección no sale. -->
+ <p class="intro">Los que no se pierden un directo. Las rachas cuentan directos seguidos; los puntos del mes se ganan platicando y jugando con Lumi.</p>
+ <div class="fieles">
+  <div class="papel ficha" id="f-rachas"><h3>Rachas</h3><ol class="tabla" id="f-rachas-l"></ol></div>
+  <div class="papel ficha" id="f-mes"><h3>Top de <span id="f-mes-n">este mes</span></h3><ol class="tabla" id="f-mes-l"></ol>
+   <p class="nota" id="f-cumples"></p></div>
+  <div class="papel ficha" id="f-voto"><h3>Vota el próximo juego</h3><ul class="tabla votos" id="f-voto-l"></ul><p class="nota" id="f-voto-n">En el chat del directo: <b>!voto</b> y el número.</p></div>
  </div>
 </section>
 
@@ -240,6 +261,27 @@
    a.querySelector('span').textContent = '$' + p.precio + ' ' + (p.moneda || 'MXN'); caja.appendChild(a);
   }
  } catch (e) {}
+})();
+</script>
+<script>
+(async () => {   /* 21 nov 2026: Fieles del chat (tablero.json) */
+  try {
+    const t = await (await fetch('tablero.json', { cache: 'no-cache' })).json(); let algo = false;
+    const fila = (ul, izq, der, extra) => { const li = document.createElement('li'); const a = document.createElement('span'); a.textContent = izq;
+      const b = document.createElement('b'); b.textContent = der; li.append(a, b); if (extra) { const s = document.createElement('small'); s.textContent = extra; a.append(' ', s); } ul.appendChild(li); };
+    const R = document.getElementById('f-rachas-l');
+    (t.rachas || []).forEach(r => fila(R, r.nombre, r.racha + ' seguidos', r.insignia));
+    if (!(t.rachas || []).length) document.getElementById('f-rachas').hidden = true; else algo = true;
+    document.getElementById('f-mes-n').textContent = t.mes || 'este mes';
+    const M = document.getElementById('f-mes-l'); (t.top_mes || []).forEach(e => fila(M, e.nombre, e.pts + ' pts'));
+    const cs = t.cumples || []; document.getElementById('f-cumples').textContent = cs.length ? '🎂 Cumplen este mes: ' + cs.map(c => c.nombre + ' (' + c.dia + ')').join(', ') : '';
+    if (!(t.top_mes || []).length && !cs.length) document.getElementById('f-mes').hidden = true; else algo = true;
+    const v = t.votacion || {}, V = document.getElementById('f-voto-l');
+    if (v.activa) { (v.opciones || []).forEach((o, i) => fila(V, (i + 1) + '. ' + o.texto, o.votos + (o.votos === 1 ? ' voto' : ' votos'))); algo = true; }
+    else if (v.ganador) { fila(V, 'Ganó: ' + v.ganador, '🏆'); document.getElementById('f-voto-n').textContent = 'La votación ya cerró.'; algo = true; }
+    else document.getElementById('f-voto').hidden = true;
+    if (algo) document.getElementById('fieles').hidden = false;
+  } catch (e) {}
 })();
 </script>
 <script>

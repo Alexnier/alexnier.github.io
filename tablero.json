@@ -1,0 +1,55 @@
+{
+ "actualizado": 1795300640,
+ "mes": "noviembre",
+ "rachas": [
+  {
+   "nombre": "MAURICIOFARFANREZA",
+   "racha": 5,
+   "total": 5,
+   "insignia": "Habitante de la 404"
+  },
+  {
+   "nombre": "alcoholizamedia",
+   "racha": 5,
+   "total": 5,
+   "insignia": "Habitante de la 404"
+  },
+  {
+   "nombre": "MorgilCharlotte",
+   "racha": 4,
+   "total": 4,
+   "insignia": "Señal estable"
+  },
+  {
+   "nombre": "fanggames1",
+   "racha": 3,
+   "total": 4,
+   "insignia": "Señal estable"
+  },
+  {
+   "nombre": "marckorojas7703",
+   "racha": 3,
+   "total": 3,
+   "insignia": "Señal estable"
+  },
+  {
+   "nombre": "Rodriguez117",
+   "racha": 3,
+   "total": 3,
+   "insignia": "Señal estable"
+  },
+  {
+   "nombre": "el_doc_del_RPG",
+   "racha": 2,
+   "total": 2,
+   "insignia": ""
+  }
+ ],
+ "top_mes": [],
+ "cumples": [],
+ "votacion": {
+  "activa": false,
+  "opciones": [],
+  "ganador": null
+ }
+}

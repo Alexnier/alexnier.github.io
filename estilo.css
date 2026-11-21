@@ -131,3 +131,14 @@ p.intro{max-width:680px;margin:-6px 0 22px}
 .especial .cinta{margin:-34px 0 6px -4px}
 .especial b{font:400 1.8rem/1.05 var(--f-titulo);text-transform:uppercase}
 #esp-d{font-weight:700;color:#3a1566}.especial small{color:var(--morado);font-weight:700}
+/* Fieles del chat (21 nov 2026): tablero.json */
+.fieles{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start}
+.fieles [hidden]{display:none}
+.tabla{list-style:none;display:grid;gap:6px;counter-reset:t}
+ol.tabla li{counter-increment:t}
+.tabla li{display:flex;justify-content:space-between;gap:10px;align-items:baseline;font-size:.9rem;color:#3a1566;border-bottom:2px dashed rgba(18,6,31,.12);padding-bottom:4px}
+ol.tabla li span::before{content:counter(t) ". ";font-weight:700;color:var(--marca)}
+.tabla li b{flex:none;font:400 1.05rem var(--f-titulo);color:var(--tinta)}
+.tabla li small{font-size:.75rem;color:var(--marca)}
+.fieles .nota{margin-top:10px;font-size:.8rem;color:#3a1566}
+@media (max-width:760px){.fieles{grid-template-columns:1fr}}
