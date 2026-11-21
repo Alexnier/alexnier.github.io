@@ -29,6 +29,9 @@
  <h2><span class="cinta mor">Todos los días · <span id="hora-base">6:00 PM</span> Pacífico</span></h2>
  <div class="zonas" id="zonas"></div>
  <p style="margin-top:14px;font-size:.9rem">La hora de tu ciudad se calcula sola (con horario de verano).</p>
+ <!-- 20 nov 2026: directo especial (especial.json; lo escribe Lumi Studio → Overlays de OBS → «Directo especial» y lo sube solo) -->
+ <a class="especial papel" id="especial" hidden><span class="cinta osc"><i class="punto"></i>Directo especial</span>
+  <b id="esp-q"></b><span id="esp-d"></span><small id="esp-t"></small></a>
 </section>
 
 <section id="directos">
@@ -229,6 +232,23 @@
    a.querySelector('span').textContent = '$' + p.precio + ' ' + (p.moneda || 'MXN'); caja.appendChild(a);
   }
  } catch (e) {}
+})();
+</script>
+<script>
+/* directo especial: se ve si es de ahora a 14 días; la hora se escribe en la del visitante y en la del Pacífico */
+(async () => {
+ try {
+  const e = await (await fetch('especial.json', { cache: 'no-cache' })).json();
+  const [Y, M, D] = e.fecha.split('-').map(Number), [h, m] = e.hora.split(':').map(Number);
+  const off = -new Date(Date.UTC(Y, M - 1, D, 12)).toLocaleString('en-US', { timeZone: 'America/Los_Angeles', timeZoneName: 'shortOffset' }).match(/GMT([+-]\d+)/)[1];
+  const t = new Date(Date.UTC(Y, M - 1, D, h + off, m)), dias = (t - Date.now()) / 864e5;
+  if (!(dias > -0.1 && dias < 14)) return;
+  const a = document.getElementById('especial'); a.hidden = false;
+  if (e.enlace) a.href = e.enlace; else a.href = 'https://www.youtube.com/@ALEXNIER';
+  document.getElementById('esp-q').textContent = (e.nombre ? e.nombre + ' · ' : '') + (e.juego || '');
+  document.getElementById('esp-d').textContent = t.toLocaleString('es-MX', { weekday: 'long', day: 'numeric', month: 'long', hour: 'numeric', minute: '2-digit' }) + ' (tu hora)';
+  document.getElementById('esp-t').textContent = t.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: 'America/Los_Angeles' }) + ' Pacífico' + (e.donde ? ' · ' + e.donde : '');
+ } catch (_) {}
 })();
 </script>
 </body></html>

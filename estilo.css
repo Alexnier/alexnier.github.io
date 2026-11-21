@@ -125,3 +125,9 @@ p.intro{max-width:680px;margin:-6px 0 22px}
 .prod span{font:700 .95rem var(--f-dato);color:var(--morado)}
 @media (max-width:760px){.conoce{grid-template-columns:1fr}.lumi-gb{max-height:340px}.cmds li{flex-direction:column;gap:2px}.productos{grid-template-columns:repeat(2,1fr);gap:14px}
  .envivo{flex-wrap:wrap}.envivo span{flex-basis:100%;order:3}}
+/* directo especial (20 nov 2026) */
+.especial{display:flex;flex-direction:column;gap:4px;align-items:flex-start;margin-top:22px;padding:18px 22px;max-width:560px;text-decoration:none;color:var(--tinta)}
+.especial[hidden]{display:none}
+.especial .cinta{margin:-34px 0 6px -4px}
+.especial b{font:400 1.8rem/1.05 var(--f-titulo);text-transform:uppercase}
+#esp-d{font-weight:700;color:#3a1566}.especial small{color:var(--morado);font-weight:700}
