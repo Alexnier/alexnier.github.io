@@ -1,11 +1,19 @@
 [
  {
+  "id": "zHpdGw313x8",
+  "titulo": "Phantom Blade Zero | Un Corazón INVENTADO 🫀",
+  "juego": "Phantom Blade Zero",
+  "gancho": "Un Corazón INVENTADO 🫀",
+  "fecha": "2026-11-21",
+  "vistas": 46
+ },
+ {
   "id": "nMcMfGneD1c",
   "titulo": "Final Fantasy VII Rebirth | Decidimos el DESTINO 🌌",
   "juego": "Final Fantasy VII Rebirth",
   "gancho": "Decidimos el DESTINO 🌌",
   "fecha": "2026-11-21",
-  "vistas": 20
+  "vistas": 53
  },
  {
   "id": "Xv3I3euft50",
@@ -13,7 +21,7 @@
   "juego": "Final Fantasy VII Rebirth",
   "gancho": "A un Paso del FINAL 🌌",
   "fecha": "2026-11-20",
-  "vistas": 114
+  "vistas": 117
  },
  {
   "id": "AVMYG3dqflI",
@@ -45,7 +53,7 @@
   "juego": "FF VII Rebirth",
   "gancho": "Cosmo Canyon: Secretos De Los GI 👻",
   "fecha": "2026-10-10",
-  "vistas": 120
+  "vistas": 121
  },
  {
   "id": "6LFCeFnnQQA",
@@ -110,13 +118,5 @@
   "gancho": "EL DESPERTAR DEL PODER 🚔🔥",
   "fecha": "2026-06-03",
   "vistas": 149
- },
- {
-  "id": "t8KXJwLp6G4",
-  "titulo": "STELLAR BLADE | PESADILLA EN ALTESS LEVOIRE 🚔☣️",
-  "juego": "STELLAR BLADE",
-  "gancho": "PESADILLA EN ALTESS LEVOIRE 🚔☣️",
-  "fecha": "2026-05-21",
-  "vistas": 93
  }
 ]
