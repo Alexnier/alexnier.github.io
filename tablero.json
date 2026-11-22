@@ -1,9 +1,15 @@
 {
- "actualizado": 1795318477,
+ "actualizado": 1795320277,
  "mes": "noviembre",
  "rachas": [
   {
    "nombre": "MAURICIOFARFANREZA",
+   "racha": 6,
+   "total": 6,
+   "insignia": "Habitante de la 404"
+  },
+  {
+   "nombre": "alcoholizamedia",
    "racha": 6,
    "total": 6,
    "insignia": "Habitante de la 404"
@@ -15,6 +21,12 @@
    "insignia": "Señal estable"
   },
   {
+   "nombre": "Rodriguez117",
+   "racha": 4,
+   "total": 4,
+   "insignia": "Señal estable"
+  },
+  {
    "nombre": "el_doc_del_RPG",
    "racha": 3,
    "total": 3,
@@ -23,24 +35,24 @@
  ],
  "top_mes": [
   {
+   "nombre": "Renzo_Marrero",
+   "pts": 59
+  },
+  {
    "nombre": "fanggames1",
-   "pts": 44
+   "pts": 49
   },
   {
    "nombre": "FelipeFuentesM",
-   "pts": 42
+   "pts": 47
   },
   {
    "nombre": "Vick_Aguirre",
-   "pts": 38
+   "pts": 40
   },
   {
    "nombre": "manuelrubionuno2142",
    "pts": 30
-  },
-  {
-   "nombre": "Renzo_Marrero",
-   "pts": 27
   }
  ],
  "cumples": [],
