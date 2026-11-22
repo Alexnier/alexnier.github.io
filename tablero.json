@@ -1,5 +1,5 @@
 {
- "actualizado": 1795320277,
+ "actualizado": 1795322137,
  "mes": "noviembre",
  "rachas": [
   {
@@ -27,6 +27,12 @@
    "insignia": "Señal estable"
   },
   {
+   "nombre": "marckorojas7703",
+   "racha": 4,
+   "total": 4,
+   "insignia": "Señal estable"
+  },
+  {
    "nombre": "el_doc_del_RPG",
    "racha": 3,
    "total": 3,
@@ -36,7 +42,7 @@
  "top_mes": [
   {
    "nombre": "Renzo_Marrero",
-   "pts": 59
+   "pts": 95
   },
   {
    "nombre": "fanggames1",
@@ -51,8 +57,8 @@
    "pts": 40
   },
   {
-   "nombre": "manuelrubionuno2142",
-   "pts": 30
+   "nombre": "MAURICIOFARFANREZA",
+   "pts": 35
   }
  ],
  "cumples": [],
