@@ -11,7 +11,7 @@
      (no quitarla mientras se use la app de TikTok). El horario se calcula en el navegador desde la hora base (6:00 PM de Tijuana). -->
 </head><body><div class="envoltura"><div class="kana">アレクスニエル</div>
 <header><a href="index.html"><img src="img/logo.png" alt="ALEXNIER · アレクスニエル · Retro & Modern Gaming"></a>
- <nav><a href="#horario">Horario</a><a href="#directos">Directos</a><a href="#lumi">Lumi</a><a href="#tienda">Tienda</a><a href="#resenas">Reseñas</a><a href="#redes">Redes</a><a href="#apoyo">Apoya</a><a href="#lumichan">Lumichan</a></nav></header>
+ <nav><a href="#horario">Horario</a><a href="#directos">Directos</a><a href="#lumi">Lumi</a><a href="#fieles">Fieles</a><a href="#tienda">Tienda</a><a href="#resenas">Reseñas</a><a href="#redes">Redes</a><a href="#apoyo">Apoya</a><a href="#lumichan">Lumichan</a></nav></header>
 
 <a class="envivo" id="envivo" hidden href="https://www.youtube.com/@ALEXNIER/live"><i class="punto"></i><b>En vivo ahora</b><span id="envivo-t"></span><em>▶ Ver</em></a>
 <!-- 20 nov 2026: vivo.json (lo actualiza GitHub cada 10 min, actualizar_directos.py) dice si ALEXNIER está en vivo -->
@@ -74,40 +74,69 @@
  <!-- 20 nov 2026: quién es Lumi y qué le puede pedir el chat (los comandos de integrations/ayudante.py del bot).
       21 nov 2026: + apuestas, trivia, rachas, cumpleaños y canjes (integrations/publico.py); en la tarde + bingo, duelo, adivina,
       ppt, voto, top y meta (integrations/comunidad.py). La misma lista va en «!comandos»
-      del bot (commands/handler.py): si cambias una, cambia la otra. -->
+      del bot (commands/handler.py): si cambias una, cambia la otra. Desde el 21 nov (tarde) va en 3 tarjetas: platica (aquí),
+      «Juega con Lumi» y «Monedas de Lumi» (premios: integrations/publico.py y comunidad.py; si cambian, cámbialos aquí). -->
  <div class="conoce">
   <img class="lumi-gb" src="img/lumi-agenda.webp" alt="Lumi pensando con su agenda en la mano" loading="lazy">
   <div class="papel ficha">
    <h3>Mi co-presentadora</h3>
    <p><b>Lumi</b> (Rumi Kisaragi) es una chica de 21 años que se quedó en la red en noviembre de 1998. Ama el City Pop, Final Fantasy VII y Evangelion, es sarcástica con cariño y está en cada directo: platica con el chat, me molesta cuando muero y hace de todo para que el directo esté vivo.</p>
-   <h4>Lo que le puedes pedir en el chat</h4>
+   <h4>Platica con ella en el chat</h4>
    <ul class="cmds">
+    <li><code>lumi …</code><span>Háblale como a cualquiera: te contesta en voz durante el directo</span></li>
     <li><code>lumi di: …</code><span>Lo repite en voz (con filtro, ¡pórtense bien!)</span></li>
-    <li><code>1 · 2 · 3 · 4</code><span>Vota en sus encuestas y contesta la trivia</span></li>
-    <li><code>!clip</code><span>Marca un momento para los clips</span></li>
     <li><code>!pregunta …</code><span>Una pregunta para mí; Lumi me la lee</span></li>
     <li><code>!idea …</code><span>Una idea para el canal; me llega al terminar el directo</span></li>
-    <li><code>!muerte · !vencido</code><span>Cuenta mis muertes y jefes en pantalla (<b>!muertes</b> dice cuántas van)</span></li>
-    <li><code>!apuesta</code><span>¿Cuántas veces muero antes del jefe? Una apuesta por jefe</span></li>
-    <li><code>!trivia</code><span>Preguntas del juego que estoy jugando; si le atinas, ganas monedas</span></li>
+    <li><code>!clip</code><span>Marca un momento para los clips</span></li>
     <li><code>!racha</code><span>Cuántos directos seguidos llevas; Lumi celebra a los fieles</span></li>
     <li><code>!cumple 3 de mayo</code><span>Lumi te festeja en tu día, con regalo</span></li>
-    <li><code>!canjes</code><span>Gasta tus monedas: un grito en pantalla, un apodo para el jefe o una encuesta</span></li>
+    <li><code>!cantar</code><span>Lumi canta</span></li>
+    <li><code>!comandos</code><span>La lista completa en el chat</span></li>
+   </ul>
+  </div>
+ </div>
+ <!-- 21 nov 2026 (tarde): juegos y monedas aparte, con las Lumi chibi (img/chibi-*.webp, de overlays/assets/branding/chibis) -->
+ <div class="lumi-juegos">
+  <div class="papel ficha con-chibi">
+   <img class="chibi" src="img/chibi-gameboy-2.webp" alt="Lumi chibi con un Game Boy" loading="lazy">
+   <h3>Juega con Lumi</h3>
+   <ul class="cmds">
+    <li><code>1 · 2 · 3 · 4</code><span>Vota en sus encuestas y contesta la trivia</span></li>
+    <li><code>!trivia</code><span>Preguntas del juego que estoy jugando</span></li>
+    <li><code>!adivina</code><span>Pistas de un juego de los 90; el primero que atine gana</span></li>
     <li><code>!bingo</code><span>Tu cartón del directo: Lumi lo va tachando sola</span></li>
+    <li><code>!apuesta</code><span>¿Cuántas veces muero antes del jefe? Una apuesta por jefe</span></li>
+    <li><code>!muerte · !vencido</code><span>Cuenta mis muertes y jefes en pantalla (<b>!muertes</b> dice cuántas van)</span></li>
     <li><code>!duelo @alguien 50</code><span>Reta a alguien por monedas (acepta con <b>!acepto</b>)</span></li>
-    <li><code>!adivina</code><span>Lumi da pistas de un juego de los 90; el primero que atine gana</span></li>
     <li><code>!ppt piedra</code><span>Piedra, papel o tijera contra Lumi</span></li>
     <li><code>!voto 2</code><span>Vota el juego del próximo directo (cuando haya votación)</span></li>
-    <li><code>!top · !meta</code><span>El top del mes y la meta de mensajes del directo</span></li>
-    <li><code>!cantar</code><span>Lumi canta</span></li>
-    <li><code>!comandos</code><span>Todo lo demás</span></li>
    </ul>
+  </div>
+  <div class="papel ficha con-chibi">
+   <img class="chibi" src="img/chibi-saluda-control-2.webp" alt="Lumi chibi saludando con un control de PlayStation" loading="lazy">
+   <h3>Monedas de Lumi</h3>
+   <p>Ganas monedas por estar en el directo y gastarlas es parte del juego. Revisa las tuyas con <b>!puntos</b>.</p>
+   <h4>Cómo se ganan</h4>
+   <ul class="lista">
+    <li>Platicando en el chat: <b>5</b> por mensaje</li>
+    <li>Atinándole a la trivia: <b>50</b> · adivinando el juego: <b>100</b> · completando el bingo: <b>200</b></li>
+    <li>Cuando el chat llega a la meta del directo (<b>!meta</b>): <b>100</b> para todos los que escribieron</li>
+    <li>En tu cumpleaños: <b>500</b> de regalo</li>
+   </ul>
+   <h4>En qué se gastan (<b>!canjes</b>)</h4>
+   <ul class="lista">
+    <li><code>!canje grito …</code> tu mensaje en grande en pantalla · <b>150</b></li>
+    <li><code>!canje apodo …</code> le pones nombre al jefe de turno · <b>200</b></li>
+    <li><code>!canje encuesta …</code> Lumi lanza una encuesta de tu tema · <b>300</b></li>
+    <li>También se apuestan en duelos y en piedra, papel o tijera</li>
+   </ul>
+   <p class="premio-mes">🏆 Platicar y jugar también da <b>puntos del mes</b> (<b>!top</b>). Quien junte más en el mes es el campeón del chat y le mando un premio.</p>
   </div>
  </div>
 </section>
 
 <section id="fieles" hidden>
- <h2><span class="cinta mor">Fieles del chat <small>常連</small></span></h2>
+ <h2><span class="cinta mor">Fieles del chat <small>常連</small></span><img class="chibi-titulo" src="img/chibi-v-guino-1.webp" alt="" loading="lazy"></h2>
  <!-- 21 nov 2026: tablero.json = GET :8765/tablero del bot (integrations/comunidad.tablero): rachas, top del mes, cumpleaños del
       mes y la votación del próximo juego. Lo baja la PC cada 30 min (~/.local/bin/tablero-pagina.sh, timer de usuario
       «tablero-pagina») y lo sube solo si cambió. Si no hay datos, la sección no sale. -->
