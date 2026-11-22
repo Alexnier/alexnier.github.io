@@ -1,5 +1,5 @@
 {
- "actualizado": 1795329457,
+ "actualizado": 1795331317,
  "mes": "noviembre",
  "rachas": [
   {
@@ -12,6 +12,12 @@
    "nombre": "MAURICIOFARFANREZA",
    "racha": 6,
    "total": 6,
+   "insignia": "Habitante de la 404"
+  },
+  {
+   "nombre": "MorgilCharlotte",
+   "racha": 5,
+   "total": 5,
    "insignia": "Habitante de la 404"
   },
   {
@@ -42,15 +48,15 @@
  "top_mes": [
   {
    "nombre": "Renzo_Marrero",
-   "pts": 209
+   "pts": 256
   },
   {
    "nombre": "MAURICIOFARFANREZA",
-   "pts": 107
+   "pts": 146
   },
   {
    "nombre": "marckorojas7703",
-   "pts": 105
+   "pts": 107
   },
   {
    "nombre": "fanggames1",
@@ -58,7 +64,7 @@
   },
   {
    "nombre": "Bayonetta-y9b",
-   "pts": 79
+   "pts": 80
   }
  ],
  "cumples": [],
