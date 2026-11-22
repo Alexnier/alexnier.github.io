@@ -75,7 +75,9 @@
       21 nov 2026: + apuestas, trivia, rachas, cumpleaños y canjes (integrations/publico.py); en la tarde + bingo, duelo, adivina,
       ppt, voto, top y meta (integrations/comunidad.py). La misma lista va en «!comandos»
       del bot (commands/handler.py): si cambias una, cambia la otra. Desde el 21 nov (tarde) va en 3 tarjetas: platica (aquí),
-      «Juega con Lumi» y «Monedas de Lumi» (premios: integrations/publico.py y comunidad.py; si cambian, cámbialos aquí). -->
+      «Juega con Lumi» y «Monedas de Lumi» (premios: integrations/publico.py y comunidad.py; si cambian, cámbialos aquí).
+      22 nov 2026: precios nuevos (PRECIOS de publico.py: grito 400, apodo 600, encuesta 900, dedicatoria 3000), meta cada
+      300 mensajes (comunidad.META), !monedas = !puntos (handler.ALIAS_PUNTOS) y !aceptar para los duelos. -->
  <div class="conoce">
   <img class="lumi-gb" src="img/lumi-agenda.webp" alt="Lumi pensando con su agenda en la mano" loading="lazy">
   <div class="papel ficha">
@@ -107,7 +109,7 @@
     <li><code>!bingo</code><span>Tu cartón del directo: Lumi lo va tachando sola</span></li>
     <li><code>!apuesta</code><span>¿Cuántas veces muero antes del jefe? Una apuesta por jefe</span></li>
     <li><code>!muerte · !vencido</code><span>Cuenta mis muertes y jefes en pantalla (<b>!muertes</b> dice cuántas van)</span></li>
-    <li><code>!duelo @alguien 50</code><span>Reta a alguien por monedas (acepta con <b>!acepto</b>)</span></li>
+    <li><code>!duelo @alguien 50</code><span>Reta a alguien por monedas (acepta con <b>!acepto</b> en 90 s)</span></li>
     <li><code>!ppt piedra</code><span>Piedra, papel o tijera contra Lumi</span></li>
     <li><code>!voto 2</code><span>Vota el juego del próximo directo (cuando haya votación)</span></li>
    </ul>
@@ -115,19 +117,20 @@
   <div class="papel ficha con-chibi">
    <img class="chibi" src="img/chibi-saluda-control-2.webp" alt="Lumi chibi saludando con un control de PlayStation" loading="lazy">
    <h3>Monedas de Lumi</h3>
-   <p>Ganas monedas por estar en el directo y gastarlas es parte del juego. Revisa las tuyas con <b>!puntos</b>.</p>
+   <p>Ganas monedas por estar en el directo y gastarlas es parte del juego. Revisa las tuyas con <b>!puntos</b> (o <b>!monedas</b>), o pregúntale: «lumi, ¿cuántas monedas tengo?».</p>
    <h4>Cómo se ganan</h4>
    <ul class="lista">
     <li>Platicando en el chat: <b>5</b> por mensaje</li>
     <li>Atinándole a la trivia: <b>50</b> · adivinando el juego: <b>100</b> · completando el bingo: <b>200</b></li>
-    <li>Cuando el chat llega a la meta del directo (<b>!meta</b>): <b>100</b> para todos los que escribieron</li>
+    <li>Cuando el chat llega a la meta del directo (<b>!meta</b>, cada 300 mensajes y luego cada 400): <b>100</b> para todos los que escribieron</li>
     <li>En tu cumpleaños: <b>500</b> de regalo</li>
    </ul>
    <h4>En qué se gastan (<b>!canjes</b>)</h4>
    <ul class="lista">
-    <li><code>!canje grito …</code> tu mensaje en grande en pantalla · <b>150</b></li>
-    <li><code>!canje apodo …</code> le pones nombre al jefe de turno · <b>200</b></li>
-    <li><code>!canje encuesta …</code> Lumi lanza una encuesta de tu tema · <b>300</b></li>
+    <li><code>!canje grito …</code> tu mensaje en grande en pantalla · <b>400</b></li>
+    <li><code>!canje apodo …</code> le pones nombre al jefe de turno · <b>600</b></li>
+    <li><code>!canje encuesta …</code> Lumi lanza una encuesta de tu tema · <b>900</b></li>
+    <li><code>!canje dedicatoria …</code> tu mensaje en la tarjeta grande del centro y Lumi lo lee en voz · <b>3000</b></li>
     <li>También se apuestan en duelos y en piedra, papel o tijera</li>
    </ul>
    <p class="premio-mes">🏆 Platicar y jugar también da <b>puntos del mes</b> (<b>!top</b>). Quien junte más en el mes es el campeón del chat y le mando un premio.</p>
