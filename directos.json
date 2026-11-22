@@ -1,11 +1,19 @@
 [
  {
+  "id": "7FiEUij-Yik",
+  "titulo": "Phantom Blade Zero | Un Paso MÁS Cerca 🗡️",
+  "juego": "Phantom Blade Zero",
+  "gancho": "Un Paso MÁS Cerca 🗡️",
+  "fecha": "2026-11-22",
+  "vistas": 78
+ },
+ {
   "id": "zHpdGw313x8",
   "titulo": "Phantom Blade Zero | Un Corazón INVENTADO 🫀",
   "juego": "Phantom Blade Zero",
   "gancho": "Un Corazón INVENTADO 🫀",
-  "fecha": "2026-11-21",
-  "vistas": 46
+  "fecha": "2026-11-22",
+  "vistas": 64
  },
  {
   "id": "nMcMfGneD1c",
@@ -13,7 +21,7 @@
   "juego": "Final Fantasy VII Rebirth",
   "gancho": "Decidimos el DESTINO 🌌",
   "fecha": "2026-11-21",
-  "vistas": 53
+  "vistas": 57
  },
  {
   "id": "Xv3I3euft50",
@@ -21,7 +29,7 @@
   "juego": "Final Fantasy VII Rebirth",
   "gancho": "A un Paso del FINAL 🌌",
   "fecha": "2026-11-20",
-  "vistas": 117
+  "vistas": 118
  },
  {
   "id": "AVMYG3dqflI",
@@ -29,7 +37,7 @@
   "juego": "Final Fantasy VII Rebirth",
   "gancho": "Salimos al ESCENARIO 🎭",
   "fecha": "2026-11-19",
-  "vistas": 78
+  "vistas": 79
  },
  {
   "id": "fplGjdCNJgk",
@@ -45,7 +53,7 @@
   "juego": "Bloodborne",
   "gancho": "Yharnam: Sin Vuelta ATRÁS 🩸",
   "fecha": "2026-10-12",
-  "vistas": 649
+  "vistas": 650
  },
  {
   "id": "1FStHreHJMw",
@@ -110,13 +118,5 @@
   "gancho": "El Búnker Maldito: Matrix 11 🚇☠️",
   "fecha": "2026-08-04",
   "vistas": 118
- },
- {
-  "id": "kK-TOd7wAu8",
-  "titulo": "DRAGON BALL: SPARKING! ZERO | EL DESPERTAR DEL PODER 🚔🔥",
-  "juego": "DRAGON BALL: SPARKING! ZERO",
-  "gancho": "EL DESPERTAR DEL PODER 🚔🔥",
-  "fecha": "2026-06-03",
-  "vistas": 149
  }
 ]
