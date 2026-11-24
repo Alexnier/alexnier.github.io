@@ -1,5 +1,5 @@
 {
- "actualizado": 1795496488,
+ "actualizado": 1795498290,
  "mes": "noviembre",
  "rachas": [
   {
@@ -15,6 +15,12 @@
    "insignia": "Habitante de la 404"
   },
   {
+   "nombre": "MorgilCharlotte",
+   "racha": 6,
+   "total": 6,
+   "insignia": "Habitante de la 404"
+  },
+  {
    "nombre": "fanggames1",
    "racha": 5,
    "total": 6,
@@ -27,13 +33,13 @@
    "insignia": "Habitante de la 404"
   },
   {
-   "nombre": "Vick_Aguirre",
+   "nombre": "FelipeFuentesM",
    "racha": 2,
    "total": 6,
    "insignia": ""
   },
   {
-   "nombre": "FelipeFuentesM",
+   "nombre": "Vick_Aguirre",
    "racha": 2,
    "total": 6,
    "insignia": ""
@@ -42,12 +48,6 @@
    "nombre": "Renzo_Marrero",
    "racha": 2,
    "total": 5,
-   "insignia": ""
-  },
-  {
-   "nombre": "CristianHerrera99-c1t",
-   "racha": 2,
-   "total": 2,
    "insignia": ""
   }
  ],
@@ -58,19 +58,19 @@
   },
   {
    "nombre": "MAURICIOFARFANREZA",
-   "pts": 260
+   "pts": 285
   },
   {
    "nombre": "alcoholizamedia",
-   "pts": 135
+   "pts": 160
+  },
+  {
+   "nombre": "Vick_Aguirre",
+   "pts": 109
   },
   {
    "nombre": "marckorojas7703",
    "pts": 107
-  },
-  {
-   "nombre": "fanggames1",
-   "pts": 100
   }
  ],
  "cumples": [],
