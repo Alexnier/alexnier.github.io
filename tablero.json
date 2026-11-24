@@ -1,5 +1,5 @@
 {
- "actualizado": 1795494630,
+ "actualizado": 1795496488,
  "mes": "noviembre",
  "rachas": [
   {
@@ -21,6 +21,12 @@
    "insignia": "Habitante de la 404"
   },
   {
+   "nombre": "Rodriguez117",
+   "racha": 5,
+   "total": 5,
+   "insignia": "Habitante de la 404"
+  },
+  {
    "nombre": "Vick_Aguirre",
    "racha": 2,
    "total": 6,
@@ -37,20 +43,26 @@
    "racha": 2,
    "total": 5,
    "insignia": ""
+  },
+  {
+   "nombre": "CristianHerrera99-c1t",
+   "racha": 2,
+   "total": 2,
+   "insignia": ""
   }
  ],
  "top_mes": [
   {
    "nombre": "Renzo_Marrero",
-   "pts": 370
+   "pts": 375
   },
   {
    "nombre": "MAURICIOFARFANREZA",
-   "pts": 231
+   "pts": 260
   },
   {
    "nombre": "alcoholizamedia",
-   "pts": 115
+   "pts": 135
   },
   {
    "nombre": "marckorojas7703",
