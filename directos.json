@@ -1,11 +1,19 @@
 [
  {
+  "id": "CMH7GHdy9Yc",
+  "titulo": "Phantom Blade Zero | El Refugio OCULTA Algo 🏕️",
+  "juego": "Phantom Blade Zero",
+  "gancho": "El Refugio OCULTA Algo 🏕️",
+  "fecha": "2026-11-24",
+  "vistas": 26
+ },
+ {
   "id": "7FiEUij-Yik",
   "titulo": "Phantom Blade Zero | Un Paso MÁS Cerca 🗡️",
   "juego": "Phantom Blade Zero",
   "gancho": "Un Paso MÁS Cerca 🗡️",
   "fecha": "2026-11-22",
-  "vistas": 78
+  "vistas": 193
  },
  {
   "id": "zHpdGw313x8",
@@ -13,7 +21,7 @@
   "juego": "Phantom Blade Zero",
   "gancho": "Un Corazón INVENTADO 🫀",
   "fecha": "2026-11-22",
-  "vistas": 64
+  "vistas": 73
  },
  {
   "id": "nMcMfGneD1c",
@@ -21,7 +29,7 @@
   "juego": "Final Fantasy VII Rebirth",
   "gancho": "Decidimos el DESTINO 🌌",
   "fecha": "2026-11-21",
-  "vistas": 57
+  "vistas": 72
  },
  {
   "id": "Xv3I3euft50",
@@ -29,7 +37,7 @@
   "juego": "Final Fantasy VII Rebirth",
   "gancho": "A un Paso del FINAL 🌌",
   "fecha": "2026-11-20",
-  "vistas": 118
+  "vistas": 143
  },
  {
   "id": "AVMYG3dqflI",
@@ -37,7 +45,7 @@
   "juego": "Final Fantasy VII Rebirth",
   "gancho": "Salimos al ESCENARIO 🎭",
   "fecha": "2026-11-19",
-  "vistas": 79
+  "vistas": 80
  },
  {
   "id": "fplGjdCNJgk",
@@ -110,13 +118,5 @@
   "gancho": "El Pueblo De La TRISTEZA ☢️",
   "fecha": "2026-08-05",
   "vistas": 260
- },
- {
-  "id": "w7L2N_dkshA",
-  "titulo": "Stellar Blade | El Búnker Maldito: Matrix 11 🚇☠️",
-  "juego": "Stellar Blade",
-  "gancho": "El Búnker Maldito: Matrix 11 🚇☠️",
-  "fecha": "2026-08-04",
-  "vistas": 118
  }
 ]
