@@ -1,70 +1,64 @@
 {
- "actualizado": 1795483053,
+ "actualizado": 1795494630,
  "mes": "noviembre",
  "rachas": [
   {
    "nombre": "alcoholizamedia",
-   "racha": 6,
-   "total": 6,
+   "racha": 7,
+   "total": 7,
    "insignia": "Habitante de la 404"
   },
   {
    "nombre": "MAURICIOFARFANREZA",
-   "racha": 6,
-   "total": 6,
-   "insignia": "Habitante de la 404"
-  },
-  {
-   "nombre": "MorgilCharlotte",
-   "racha": 5,
-   "total": 5,
+   "racha": 7,
+   "total": 7,
    "insignia": "Habitante de la 404"
   },
   {
    "nombre": "fanggames1",
-   "racha": 4,
+   "racha": 5,
+   "total": 6,
+   "insignia": "Habitante de la 404"
+  },
+  {
+   "nombre": "Vick_Aguirre",
+   "racha": 2,
+   "total": 6,
+   "insignia": ""
+  },
+  {
+   "nombre": "FelipeFuentesM",
+   "racha": 2,
+   "total": 6,
+   "insignia": ""
+  },
+  {
+   "nombre": "Renzo_Marrero",
+   "racha": 2,
    "total": 5,
-   "insignia": "Señal estable"
-  },
-  {
-   "nombre": "marckorojas7703",
-   "racha": 4,
-   "total": 4,
-   "insignia": "Señal estable"
-  },
-  {
-   "nombre": "Rodriguez117",
-   "racha": 4,
-   "total": 4,
-   "insignia": "Señal estable"
-  },
-  {
-   "nombre": "el_doc_del_RPG",
-   "racha": 3,
-   "total": 3,
-   "insignia": "Señal estable"
+   "insignia": ""
   }
  ],
  "top_mes": [
   {
    "nombre": "Renzo_Marrero",
-   "pts": 321
+   "pts": 370
   },
   {
    "nombre": "MAURICIOFARFANREZA",
-   "pts": 187
+   "pts": 231
+  },
+  {
+   "nombre": "alcoholizamedia",
+   "pts": 115
   },
   {
    "nombre": "marckorojas7703",
    "pts": 107
   },
   {
-   "nombre": "alcoholizamedia",
-   "pts": 102
-  },
-  {
    "nombre": "fanggames1",
-   "pts": 98
+   "pts": 100
   }
  ],
  "cumples": [],
