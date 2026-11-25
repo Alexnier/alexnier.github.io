@@ -1,11 +1,19 @@
 [
  {
+  "id": "3wSOK7XM2VY",
+  "titulo": "Mischief Makers | El Profesor Ha DESAPARECIDO 🚨",
+  "juego": "Mischief Makers",
+  "gancho": "El Profesor Ha DESAPARECIDO 🚨",
+  "fecha": "2026-11-25",
+  "vistas": 0
+ },
+ {
   "id": "CMH7GHdy9Yc",
   "titulo": "Phantom Blade Zero | El Refugio OCULTA Algo 🏕️",
   "juego": "Phantom Blade Zero",
   "gancho": "El Refugio OCULTA Algo 🏕️",
   "fecha": "2026-11-24",
-  "vistas": 26
+  "vistas": 123
  },
  {
   "id": "7FiEUij-Yik",
@@ -13,7 +21,7 @@
   "juego": "Phantom Blade Zero",
   "gancho": "Un Paso MÁS Cerca 🗡️",
   "fecha": "2026-11-22",
-  "vistas": 193
+  "vistas": 200
  },
  {
   "id": "zHpdGw313x8",
@@ -21,7 +29,7 @@
   "juego": "Phantom Blade Zero",
   "gancho": "Un Corazón INVENTADO 🫀",
   "fecha": "2026-11-22",
-  "vistas": 73
+  "vistas": 75
  },
  {
   "id": "nMcMfGneD1c",
@@ -29,7 +37,7 @@
   "juego": "Final Fantasy VII Rebirth",
   "gancho": "Decidimos el DESTINO 🌌",
   "fecha": "2026-11-21",
-  "vistas": 72
+  "vistas": 76
  },
  {
   "id": "Xv3I3euft50",
@@ -77,7 +85,7 @@
   "juego": "FF7 Rebirth",
   "gancho": "Cosmo Canyon: La PRUEBA de Red 🔥",
   "fecha": "2026-10-09",
-  "vistas": 70
+  "vistas": 71
  },
  {
   "id": "u92S8ea51KU",
@@ -110,13 +118,5 @@
   "gancho": "Rotten Labyrinth: Un ALTAR",
   "fecha": "2026-08-06",
   "vistas": 171
- },
- {
-  "id": "HqOWUyUo8SM",
-  "titulo": "FF7 Rebirth | El Pueblo De La TRISTEZA ☢️",
-  "juego": "FF7 Rebirth",
-  "gancho": "El Pueblo De La TRISTEZA ☢️",
-  "fecha": "2026-08-05",
-  "vistas": 260
  }
 ]
