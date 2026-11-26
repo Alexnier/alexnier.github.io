@@ -1,5 +1,5 @@
 {
- "actualizado": 1795669130,
+ "actualizado": 1795670990,
  "mes": "noviembre",
  "rachas": [
   {
@@ -12,6 +12,12 @@
    "nombre": "MAURICIOFARFANREZA",
    "racha": 8,
    "total": 8,
+   "insignia": "Habitante de la 404"
+  },
+  {
+   "nombre": "MorgilCharlotte",
+   "racha": 7,
+   "total": 7,
    "insignia": "Habitante de la 404"
   },
   {
@@ -43,26 +49,20 @@
    "racha": 3,
    "total": 6,
    "insignia": "Señal estable"
-  },
-  {
-   "nombre": "qaryxoxo",
-   "racha": 2,
-   "total": 3,
-   "insignia": ""
   }
  ],
  "top_mes": [
   {
    "nombre": "MAURICIOFARFANREZA",
-   "pts": 493
+   "pts": 542
   },
   {
-   "nombre": "renzo_marrero",
-   "pts": 492
+   "nombre": "Renzo_Marrero",
+   "pts": 529
   },
   {
    "nombre": "alcoholizamedia",
-   "pts": 371
+   "pts": 401
   },
   {
    "nombre": "FelipeFuentesM",
