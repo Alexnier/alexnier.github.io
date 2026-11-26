@@ -77,7 +77,10 @@
       del bot (commands/handler.py): si cambias una, cambia la otra. Desde el 21 nov (tarde) va en 3 tarjetas: platica (aquí),
       «Juega con Lumi» y «Monedas de Lumi» (premios: integrations/publico.py y comunidad.py; si cambian, cámbialos aquí).
       22 nov 2026: precios nuevos (PRECIOS de publico.py: grito 400, apodo 600, encuesta 900, dedicatoria 3000), meta cada
-      300 mensajes (comunidad.META), !monedas = !puntos (handler.ALIAS_PUNTOS) y !aceptar para los duelos. -->
+      300 mensajes (comunidad.META), !monedas = !puntos (handler.ALIAS_PUNTOS) y !aceptar para los duelos.
+      26 nov 2026: lista COMPLETA (Alex: «pon todos los comandos que sirven con Lumi»): + !rachas, !lore, !amigos, !merch,
+      !mascota/!alimentar (Ciber-Chocobo), !meta, !top, frases sin «!» («lumi haz una trivia», «lumi marca eso»…), la
+      tarjeta «Lo nuevo de Lumi» y «Para mí y los mods» (los de ayudante.py/comunidad.py con permiso + la voz: oido_alex.py). -->
  <div class="conoce">
   <img class="lumi-gb" src="img/lumi-agenda.webp" alt="Lumi pensando con su agenda en la mano" loading="lazy">
   <div class="papel ficha">
@@ -92,8 +95,22 @@
     <li><code>!clip</code><span>Marca un momento para los clips</span></li>
     <li><code>!racha</code><span>Cuántos directos seguidos llevas; Lumi celebra a los fieles</span></li>
     <li><code>!cumple 3 de mayo</code><span>Lumi te festeja en tu día, con regalo</span></li>
+    <li><code>!rachas</code><span>Las 3 rachas más largas del chat</span></li>
+    <li><code>!lore</code><span>Lumi cuenta algo de su historia (o «lumi, dime el lore de @alguien»)</span></li>
+    <li><code>!amigos</code><span>Los canales de mis amigos</span></li>
+    <li><code>!merch</code><span>La tienda: playeras y cosas del canal</span></li>
     <li><code>!cantar</code><span>Lumi canta</span></li>
-    <li><code>!comandos</code><span>La lista completa en el chat</span></li>
+    <li><code>!comandos · !ayuda</code><span>La lista en el chat</span></li>
+   </ul>
+   <h4>Sin «!» también te entiende</h4>
+   <ul class="cmds">
+    <li><code>lumi haz una trivia</code><span>Igual que !trivia</span></li>
+    <li><code>lumi adivina</code><span>Igual que !adivina</span></li>
+    <li><code>lumi marca eso</code><span>Igual que !clip</span></li>
+    <li><code>lumi canta</code><span>Igual que !cantar</span></li>
+    <li><code>lumi cuál es mi racha</code><span>Igual que !racha</span></li>
+    <li><code>lumi voto por la 2</code><span>Igual que !voto 2</span></li>
+    <li><code>lumi dile a @alguien que …</code><span>Le pasa tu recado en voz</span></li>
    </ul>
   </div>
  </div>
@@ -105,13 +122,15 @@
    <ul class="cmds">
     <li><code>1 · 2 · 3 · 4</code><span>Vota en sus encuestas y contesta la trivia</span></li>
     <li><code>!trivia</code><span>Preguntas del juego que estoy jugando</span></li>
-    <li><code>!adivina</code><span>Pistas de un juego de los 90; el primero que atine gana</span></li>
+    <li><code>!adivina</code><span>Pistas de uno de 84 juegos clásicos (no se repiten hasta que salgan todos); el primero que atine gana</span></li>
     <li><code>!bingo</code><span>Tu cartón del directo: Lumi lo va tachando sola</span></li>
     <li><code>!apuesta</code><span>¿Cuántas veces muero antes del jefe? Una apuesta por jefe</span></li>
     <li><code>!muerte · !vencido</code><span>Cuenta mis muertes y jefes en pantalla (<b>!muertes</b> dice cuántas van)</span></li>
     <li><code>!duelo @alguien 50</code><span>Reta a alguien por monedas (acepta con <b>!acepto</b> en 90 s)</span></li>
     <li><code>!ppt piedra</code><span>Piedra, papel o tijera contra Lumi</span></li>
     <li><code>!voto 2</code><span>Vota el juego del próximo directo (cuando haya votación)</span></li>
+    <li><code>!mascota · !alimentar</code><span>Cómo está el Ciber-Chocobo; denle de comer cuando tenga hambre</span></li>
+    <li><code>!meta · !top</code><span>Cuánto falta para la meta del directo · los 3 primeros del mes</span></li>
    </ul>
   </div>
   <div class="papel ficha con-chibi">
@@ -134,6 +153,35 @@
     <li>También se apuestan en duelos y en piedra, papel o tijera</li>
    </ul>
    <p class="premio-mes">🏆 Platicar y jugar también da <b>puntos del mes</b> (<b>!top</b>). Quien junte más en el mes es el campeón del chat y le mando un premio.</p>
+  </div>
+ </div>
+ <!-- 26 nov 2026: lo nuevo y los comandos con permiso (Alex, mods y amigos). -->
+ <div class="lumi-juegos">
+  <div class="papel ficha con-chibi">
+   <img class="chibi" src="img/chibi-v-guino-1.webp" alt="Lumi chibi guiñando un ojo" loading="lazy">
+   <h3>Lo nuevo de Lumi</h3>
+   <p>Lo que estrenamos el 26 de noviembre.</p>
+   <ul class="lista">
+    <li><b>Ya me oye:</b> le hablo con mi micrófono («Lumi, súmame una muerte», «Lumi, abre una votación entre…») y lo hace al momento</li>
+    <li><b>Adivina el juego</b> ahora tiene 84 juegos de NES, Super Nintendo, Mega Drive, PlayStation, Nintendo 64, arcadias y PC, y no repite</li>
+    <li>Pregúntale tus monedas como quieras: «¿cuántas lumicoins tengo, lumi?» también funciona</li>
+    <li>En los juegos retro las encuestas salen chiquitas para no tapar el juego (completas al empezar y al final)</li>
+   </ul>
+  </div>
+  <div class="papel ficha con-chibi">
+   <img class="chibi" src="img/chibi-asoma-1.webp" alt="Lumi chibi asomándose" loading="lazy">
+   <h3>Para mí y los mods</h3>
+   <p>Estos solo funcionan si los escribo yo, un mod o un amigo del canal.</p>
+   <ul class="cmds">
+    <li><code>!encuesta</code><span>Lumi inventa una encuesta del juego (o «!encuesta ¿Pregunta? | A | B»)</span></li>
+    <li><code>!cerrar</code><span>Cierra la encuesta</span></li>
+    <li><code>!votacion A | B | C</code><span>Votación del juego del próximo directo · <b>!votacion cerrar</b> dice el ganador</span></li>
+    <li><code>!muertes 5 · !jefes 2</code><span>Corrige el contador (<b>!muerte -1</b> resta una)</span></li>
+    <li><code>!apuesta stop</code><span>Cancela la apuesta</span></li>
+    <li><code>!preguntas</code><span>Lumi lee la siguiente pregunta del chat</span></li>
+    <li><code>!resumen</code><span>Lumi hace el resumen del directo antes de despedirnos</span></li>
+    <li><code>Lumi, … (con mi voz)</code><span>Cualquiera de estos, dicho al micrófono</span></li>
+   </ul>
   </div>
  </div>
 </section>
