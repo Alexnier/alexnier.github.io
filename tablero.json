@@ -1,68 +1,38 @@
 {
- "actualizado": 1795509330,
+ "actualizado": 1795661690,
  "mes": "noviembre",
  "rachas": [
   {
    "nombre": "alcoholizamedia",
-   "racha": 7,
-   "total": 7,
+   "racha": 8,
+   "total": 8,
    "insignia": "Habitante de la 404"
   },
   {
    "nombre": "MAURICIOFARFANREZA",
-   "racha": 7,
-   "total": 7,
+   "racha": 8,
+   "total": 8,
    "insignia": "Habitante de la 404"
-  },
-  {
-   "nombre": "MorgilCharlotte",
-   "racha": 6,
-   "total": 6,
-   "insignia": "Habitante de la 404"
-  },
-  {
-   "nombre": "fanggames1",
-   "racha": 5,
-   "total": 6,
-   "insignia": "Habitante de la 404"
-  },
-  {
-   "nombre": "Rodriguez117",
-   "racha": 5,
-   "total": 5,
-   "insignia": "Habitante de la 404"
-  },
-  {
-   "nombre": "Vick_Aguirre",
-   "racha": 2,
-   "total": 6,
-   "insignia": ""
   },
   {
    "nombre": "FelipeFuentesM",
-   "racha": 2,
-   "total": 6,
-   "insignia": ""
-  },
-  {
-   "nombre": "Renzo_Marrero",
-   "racha": 2,
-   "total": 5,
-   "insignia": ""
+   "racha": 3,
+   "total": 7,
+   "insignia": "Señal estable"
   }
  ],
  "top_mes": [
+  {
+   "nombre": "MAURICIOFARFANREZA",
+   "pts": 391
+  },
   {
    "nombre": "Renzo_Marrero",
    "pts": 375
   },
   {
-   "nombre": "MAURICIOFARFANREZA",
-   "pts": 368
-  },
-  {
    "nombre": "alcoholizamedia",
-   "pts": 274
+   "pts": 288
   },
   {
    "nombre": "fanggames1",
