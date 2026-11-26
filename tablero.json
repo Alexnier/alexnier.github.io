@@ -1,5 +1,5 @@
 {
- "actualizado": 1795661690,
+ "actualizado": 1795663550,
  "mes": "noviembre",
  "rachas": [
   {
@@ -15,32 +15,56 @@
    "insignia": "Habitante de la 404"
   },
   {
+   "nombre": "Rodriguez117",
+   "racha": 6,
+   "total": 6,
+   "insignia": "Habitante de la 404"
+  },
+  {
+   "nombre": "Vick_Aguirre",
+   "racha": 3,
+   "total": 7,
+   "insignia": "Señal estable"
+  },
+  {
    "nombre": "FelipeFuentesM",
    "racha": 3,
    "total": 7,
    "insignia": "Señal estable"
+  },
+  {
+   "nombre": "Renzo_Marrero",
+   "racha": 3,
+   "total": 6,
+   "insignia": "Señal estable"
+  },
+  {
+   "nombre": "qaryxoxo",
+   "racha": 2,
+   "total": 3,
+   "insignia": ""
   }
  ],
  "top_mes": [
   {
-   "nombre": "MAURICIOFARFANREZA",
-   "pts": 391
+   "nombre": "Renzo_Marrero",
+   "pts": 411
   },
   {
-   "nombre": "Renzo_Marrero",
-   "pts": 375
+   "nombre": "MAURICIOFARFANREZA",
+   "pts": 408
   },
   {
    "nombre": "alcoholizamedia",
-   "pts": 288
-  },
-  {
-   "nombre": "fanggames1",
-   "pts": 133
+   "pts": 324
   },
   {
    "nombre": "Vick_Aguirre",
-   "pts": 130
+   "pts": 140
+  },
+  {
+   "nombre": "FelipeFuentesM",
+   "pts": 135
   }
  ],
  "cumples": [],
