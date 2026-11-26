@@ -1,5 +1,5 @@
 {
- "actualizado": 1795663550,
+ "actualizado": 1795665410,
  "mes": "noviembre",
  "rachas": [
   {
@@ -12,6 +12,12 @@
    "nombre": "MAURICIOFARFANREZA",
    "racha": 8,
    "total": 8,
+   "insignia": "Habitante de la 404"
+  },
+  {
+   "nombre": "fanggames1",
+   "racha": 6,
+   "total": 7,
    "insignia": "Habitante de la 404"
   },
   {
@@ -48,23 +54,23 @@
  "top_mes": [
   {
    "nombre": "Renzo_Marrero",
-   "pts": 411
+   "pts": 448
   },
   {
    "nombre": "MAURICIOFARFANREZA",
-   "pts": 408
+   "pts": 435
   },
   {
    "nombre": "alcoholizamedia",
-   "pts": 324
-  },
-  {
-   "nombre": "Vick_Aguirre",
-   "pts": 140
+   "pts": 345
   },
   {
    "nombre": "FelipeFuentesM",
-   "pts": 135
+   "pts": 145
+  },
+  {
+   "nombre": "Vick_Aguirre",
+   "pts": 141
   }
  ],
  "cumples": [],
