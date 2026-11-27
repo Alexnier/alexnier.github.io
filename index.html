@@ -80,7 +80,9 @@
       300 mensajes (comunidad.META), !monedas = !puntos (handler.ALIAS_PUNTOS) y !aceptar para los duelos.
       26 nov 2026: lista COMPLETA (Alex: «pon todos los comandos que sirven con Lumi»): + !rachas, !lore, !amigos, !merch,
       !mascota/!alimentar (Ciber-Chocobo), !meta, !top, frases sin «!» («lumi haz una trivia», «lumi marca eso»…), la
-      tarjeta «Lo nuevo de Lumi» y «Para mí y los mods» (los de ayudante.py/comunidad.py con permiso + la voz: oido_alex.py). -->
+      tarjeta «Lo nuevo de Lumi» y «Para mí y los mods» (los de ayudante.py/comunidad.py con permiso + la voz: oido_alex.py).
+      27 nov 2026: + !juzga, !marcador («Lumi contra el chat»), «lumi juzga …» y !reacciona (integrations/segmentos.py del bot),
+      y «Lo nuevo» del 27 (plática en voz, opiniones fijas de data/opiniones.json). -->
  <div class="conoce">
   <img class="lumi-gb" src="img/lumi-agenda.webp" alt="Lumi pensando con su agenda en la mano" loading="lazy">
   <div class="papel ficha">
@@ -111,6 +113,7 @@
     <li><code>lumi cuál es mi racha</code><span>Igual que !racha</span></li>
     <li><code>lumi voto por la 2</code><span>Igual que !voto 2</span></li>
     <li><code>lumi dile a @alguien que …</code><span>Le pasa tu recado en voz</span></li>
+    <li><code>lumi juzga …</code><span>Igual que !juzga</span></li>
    </ul>
   </div>
  </div>
@@ -131,6 +134,8 @@
     <li><code>!voto 2</code><span>Vota el juego del próximo directo (cuando haya votación)</span></li>
     <li><code>!mascota · !alimentar</code><span>Cómo está el Ciber-Chocobo; denle de comer cuando tenga hambre</span></li>
     <li><code>!meta · !top</code><span>Cuánto falta para la meta del directo · los 3 primeros del mes</span></li>
+    <li><code>!juzga …</code><span>Lumi le pone calificación del 1 al 10 a lo que quieras, con su opinión sin filtro</span></li>
+    <li><code>!marcador</code><span>Lumi contra el chat: si nadie le atina a la trivia, el punto es para ella</span></li>
    </ul>
   </div>
   <div class="papel ficha con-chibi">
@@ -167,8 +172,15 @@
   <div class="papel ficha con-chibi">
    <img class="chibi" src="img/chibi-v-guino-1.webp" alt="Lumi chibi guiñando un ojo" loading="lazy">
    <h3>Lo nuevo de Lumi</h3>
-   <p>Lo que estrenamos el 26 de noviembre.</p>
+   <p>Lo que estrenamos el 26 y el 27 de noviembre.</p>
    <ul class="lista">
+    <li><b>Plática de verdad:</b> cuando Lumi me contesta, puedo seguirle la plática con la voz sin decir «Lumi», y si la interrumpo, se calla y me escucha</li>
+    <li><b>Opiniones de siempre:</b> ya tiene sus favoritos y sus pleitos (Chrono Trigger, Kefka, la pizza con piña…) y no cambia de opinión</li>
+    <li><b>!juzga:</b> pídele que califique lo que sea, del 1 al 10</li>
+    <li><b>Lumi contra el chat:</b> las trivias ahora llevan marcador, y si nadie le atina se burla</li>
+    <li><b>Lumi reacciona:</b> vemos tráilers y videos juntos y ella comenta lo que ve</li>
+    <li>Entiende mejor de qué están hablando en el chat («lumi, ¿cuál es el juego que dijo Mau?») y ya no inventa cosas de mí que no sabe</li>
+    <li>Cuenta cuántas veces muero con el mismo jefe y te dice cuál fue el más difícil del directo</li>
     <li><b>Ya me oye:</b> le hablo con mi micrófono («Lumi, súmame una muerte», «Lumi, abre una votación entre…») y lo hace al momento</li>
     <li><b>Adivina el juego</b> ahora tiene 126 juegos de NES, Super Nintendo, Mega Drive, PlayStation, Nintendo 64, arcadias y PC, y no repite</li>
     <li>Pregúntale tus monedas como quieras: «¿cuántas lumicoins tengo, lumi?» también funciona</li>
@@ -194,6 +206,7 @@
     <li><code>!preguntas</code><span>Lumi lee la siguiente pregunta del chat</span></li>
     <li><code>!resumen</code><span>Lumi hace el resumen del directo antes de despedirnos</span></li>
     <li><code>!reto cumplido · !reto fallado</code><span>Cierra el reto que canjearon (si lo cumplo, gana puntos del mes)</span></li>
+    <li><code>!reacciona 10</code><span>Lumi reacciona a lo que se ve esos minutos (tráiler, video, clip) · <b>!reacciona stop</b> la para</span></li>
     <li><code>Lumi, … (con mi voz)</code><span>Cualquiera de estos, dicho al micrófono</span></li>
    </ul>
   </div>
