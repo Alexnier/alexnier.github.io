@@ -1,0 +1,81 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Patrocinios · ALEXNIER</title>
+<meta name="description" content="Patrocina los directos de Alexnier: videojuegos retro y modernos en español, cinco días a la semana, con Lumi.">
+<meta property="og:title" content="Patrocinios · ALEXNIER"><meta property="og:description" content="Directos de 4 horas, cinco días a la semana, con un chat que participa de verdad.">
+<meta property="og:image" content="https://alexnier.github.io/img/compartir.jpg"><meta name="theme-color" content="#0D0716">
+<link rel="icon" href="img/avatar.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&family=Zen+Kaku+Gothic+New:wght@900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilo.css">
+<!-- 27 nov 2026 · kit para patrocinadores (Alex: «me gusta todo», punto 5). Números del 27 nov 2026: YouTube Data API
+     (suscriptores, vistas, videos) y la memoria de Lumi (data/memoria_directos.json: 8 directos del 17 al 26 nov).
+     SE ACTUALIZAN SOLOS: el script de abajo los toma de tablero.json → "canal" (bot: integrations/comunidad._canal, YouTube cada
+     6 h; lo sube la PC cada 30 min con el tablero de fieles). Si no carga, quedan los de aquí. Sin precios: se platican. -->
+<style>
+.numeros{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.num{padding:22px 24px}.num b{display:block;font:400 3rem/1 var(--f-titulo)}.num span{font-size:.9rem}
+.ofrece{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.of{padding:22px 26px}.of h3{font:400 1.7rem/1 var(--f-titulo);text-transform:uppercase;margin-bottom:8px}.of p{font-size:.92rem;line-height:1.5}
+.contacto{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px}
+@media (max-width:760px){.numeros,.ofrece{grid-template-columns:1fr}}
+</style>
+</head><body><div class="envoltura"><div class="kana">スポンサー</div>
+<header><a href="index.html"><img src="img/logo.png" alt="ALEXNIER · Retro & Modern Gaming"></a>
+ <nav><a href="index.html">Inicio</a><a href="#numeros">Números</a><a href="#ofrece">Qué ofrezco</a><a href="#contacto">Contacto</a></nav></header>
+
+<div class="hero">
+ <div class="txt">
+  <span class="cinta osc"><i class="punto"></i>Patrocinios <small>スポンサー</small></span>
+  <h1 class="titulo"><span data-t="TU MARCA">TU MARCA</span><span class="l2" data-t="EN EL DIRECTO">EN EL DIRECTO</span></h1>
+  <p>Directos de videojuegos retro y modernos en español, de martes a sábado a las 6:00 PM (Pacífico), con un chat que platica de verdad y con <b>Lumi</b>, la co-presentadora de los 90 que reacciona, juzga y anima el directo. Además escribo en <b>Game Effect</b>, la revista de videojuegos de México.</p>
+  <a class="boton" href="#contacto">Hablemos</a>
+ </div>
+ <img class="lumi" src="img/lumi.webp" alt="Lumi saludando">
+</div>
+
+<section id="numeros">
+ <h2><span class="cinta mor">Los números <small>数字</small></span></h2>
+ <div class="numeros">
+  <div class="papel num"><b data-n="mensajes_directo">836</b><span>mensajes en el chat por directo, en promedio</span></div>
+  <div class="papel num"><b data-n="horas_directo">4 h</b><span>por directo, cinco días a la semana</span></div>
+  <div class="papel num"><b data-n="personas_mes">43</b><span>personas distintas platicando en el último mes</span></div>
+  <div class="papel num"><b data-n="vistas">110 mil</b><span>vistas en el canal</span></div>
+  <div class="papel num"><b data-n="videos">422</b><span>videos publicados</span></div>
+  <div class="papel num"><b data-n="suscriptores">592</b><span>suscriptores, con membresías activas</span></div>
+ </div>
+ <p class="intro" style="margin-top:16px">Comunidad chica y muy activa: cada persona escribe decenas de mensajes por directo, juega con Lumi y regresa (ocho seguidos los más fieles). Los clips de cada directo salen también en Facebook, Instagram, TikTok, Threads y YouTube Shorts.</p>
+</section>
+
+<section id="ofrece">
+ <h2><span class="cinta osc"><i class="punto"></i>Qué ofrezco <small>プラン</small></span></h2>
+ <div class="ofrece">
+  <div class="papel of"><h3>Mención de Lumi</h3><p>Lumi menciona tu marca con su voz una vez en cada directo, con tu frase.</p></div>
+  <div class="papel of"><h3>Tu logo en pantalla</h3><p>Tu nombre y enlace en la información que rota en los overlays, todo el directo.</p></div>
+  <div class="papel of"><h3>Directo patrocinado</h3><p>Un directo dedicado: tu juego o producto en pantalla, con reseña honesta y la participación del chat.</p></div>
+  <div class="papel of"><h3>Redes</h3><p>Tu marca en los clips, el carrusel y el resumen del directo que se publican en Facebook, Instagram, TikTok, Threads y Shorts.</p></div>
+ </div>
+</section>
+
+<section id="contacto">
+ <h2><span class="cinta mor">Contacto <small>連絡</small></span></h2>
+ <p class="intro">Escríbeme y armamos algo a tu medida (tiendas de videojuegos, accesorios retro, juegos indie, marcas gamer de México y Latinoamérica).</p>
+ <div class="contacto">
+  <a class="boton" href="https://www.instagram.com/alexnier_/">Instagram</a>
+  <a class="boton" href="https://discord.gg/Cs3nYrgDSr">Discord</a>
+  <a class="boton" href="https://ko-fi.com/alexnier">Ko-fi</a>
+ </div>
+</section>
+
+<footer><span>© 2026 ALEXNIER · Retro &amp; Modern Gaming</span><span><a href="index.html">Inicio</a><a href="terminos.html">Términos</a><a href="privacidad.html">Privacidad</a></span></footer>
+</div>
+<script>
+(async () => {   /* 27 nov 2026: números al día desde tablero.json (ver el comentario de arriba) */
+  try {
+    const c = (await (await fetch('tablero.json', { cache: 'no-cache' })).json()).canal || {};
+    const fmt = (k, v) => k === 'vistas' ? (v >= 1e6 ? (v / 1e6).toFixed(1).replace('.0', '') + ' mill.' : Math.round(v / 1000) + ' mil')
+                        : k === 'horas_directo' ? Math.round(v) + ' h' : v.toLocaleString('es-MX');
+    document.querySelectorAll('[data-n]').forEach(b => { const v = c[b.dataset.n]; if (typeof v === 'number' && v > 0) b.textContent = fmt(b.dataset.n, v); });
+  } catch (e) {}
+})();
+</script>
+</body></html>
