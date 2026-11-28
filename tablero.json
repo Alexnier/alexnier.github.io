@@ -1,15 +1,29 @@
 {
- "actualizado": 1795825698,
+ "actualizado": 1795826559,
+ "sugerencias": [],
+ "mvp": {
+  "nombre": "alcoholizamedia",
+  "juego": "Mischief Makers",
+  "fecha": "2026-11-25"
+ },
+ "canal": {
+  "suscriptores": 592,
+  "vistas": 110281,
+  "videos": 422,
+  "mensajes_directo": 836,
+  "horas_directo": 4.2,
+  "personas_mes": 43
+ },
  "mes": "noviembre",
  "rachas": [
   {
-   "nombre": "alcoholizamedia",
+   "nombre": "MAURICIOFARFANREZA",
    "racha": 8,
    "total": 8,
    "insignia": "Habitante de la 404"
   },
   {
-   "nombre": "MAURICIOFARFANREZA",
+   "nombre": "alcoholizamedia",
    "racha": 8,
    "total": 8,
    "insignia": "Habitante de la 404"
