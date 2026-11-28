@@ -1,0 +1,42 @@
+{
+ "_como_funciona": "Campañas para la fuente de OBS campanas/index.html (ver su comentario). Cada campaña: marca, mensaje y enlace (o imagen en campanas/arte/), color, inicio y fin (AAAA-MM-DD, hora del Pacífico), dias (lun..dom; vacío = todos), horas (\"18:00-23:59\"), cada_min (cada cuántos minutos sale), dura_seg (cuántos segundos se queda), canales ([\"*\"] = todos o [\"vick\", \"alexnier\"]), activa (false = pausada). Fuera de fechas no sale nada. Campos extra: titulo (línea grande; si no, marca), logo_claro/logo_oscuro (en arte/, según el estilo).",
+ "campanas": [
+  {
+   "id": "game-effect",
+   "marca": "Game Effect",
+   "titulo": "La revista de videojuegos de México",
+   "mensaje": "Reseñas, avances y la edición 53 gratis en línea.",
+   "enlace": "gameeffect.com.mx",
+   "logo_claro": "game-effect-negro.svg",
+   "logo_oscuro": "game-effect-blanco.svg",
+   "color": "#0A0A0A",
+   "inicio": "2026-11-27",
+   "fin": "2026-12-03",
+   "dias": [],
+   "horas": "18:00-23:59",
+   "cada_min": 15,
+   "dura_seg": 25,
+   "canales": [
+    "alexnier"
+   ],
+   "activa": true
+  },
+  {
+   "id": "demo",
+   "marca": "Tu marca aquí",
+   "mensaje": "Ejemplo de campaña: así se ve un patrocinio en el directo.",
+   "enlace": "alexnier.github.io/patrocinios.html",
+   "color": "#3A1566",
+   "inicio": "2026-11-27",
+   "fin": "2026-12-04",
+   "dias": [],
+   "horas": "17:00-23:59",
+   "cada_min": 10,
+   "dura_seg": 20,
+   "canales": [
+    "*"
+   ],
+   "activa": false
+  }
+ ]
+}
