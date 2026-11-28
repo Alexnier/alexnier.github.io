@@ -1,5 +1,5 @@
 {
- "_como_funciona": "Campañas para la fuente de OBS campanas/index.html (ver su comentario). Cada campaña: marca, mensaje y enlace (o imagen en campanas/arte/), color, inicio y fin (AAAA-MM-DD, hora del Pacífico), dias (lun..dom; vacío = todos), horas (\"18:00-23:59\"), cada_min (cada cuántos minutos sale), dura_seg (cuántos segundos se queda), canales ([\"*\"] = todos o [\"vick\", \"alexnier\"]), activa (false = pausada). Fuera de fechas no sale nada. Campos extra: titulo (línea grande; si no, marca), logo_claro/logo_oscuro (en arte/, según el estilo).",
+ "_como_funciona": "Campañas para la fuente de OBS campanas/index.html (ver su comentario). Cada campaña: marca, mensaje y enlace (o imagen en campanas/arte/), color, inicio y fin (AAAA-MM-DD, hora del Pacífico), dias (lun..dom; vacío = todos), horas (\"18:00-23:59\"), cada_min (cada cuántos minutos sale), dura_seg (cuántos segundos se queda), canales ([\"*\"] = todos o [\"vick\", \"alexnier\"]), activa (false = pausada). Fuera de fechas no sale nada. Campos extra: titulo (línea grande; si no, marca), logo_claro/logo_oscuro (en arte/, según el estilo). voz (texto del comercial que Lumi dice cuando sale la tarjeta en el directo de Alexnier; bot integrations/apoyos.py) y voz_cada_min (como mucho cada cuántos minutos lo dice; 30).",
  "campanas": [
   {
    "id": "game-effect",
@@ -19,7 +19,9 @@
    "canales": [
     "alexnier"
    ],
-   "activa": true
+   "activa": true,
+   "voz": "No se olviden de descargar la revista número 53 de Game Effect, la revista de videojuegos de México. Es gratis y el link está en la descripción.",
+   "voz_cada_min": 30
   },
   {
    "id": "demo",
