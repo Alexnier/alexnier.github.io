@@ -6,6 +6,20 @@
  },
  "semana": [
   {
+   "dia": "SÁB",
+   "fecha": "28/11",
+   "hoy": true,
+   "tipo": "directo",
+   "texto": "Directo"
+  },
+  {
+   "dia": "DOM",
+   "fecha": "29/11",
+   "hoy": false,
+   "tipo": "descanso",
+   "texto": "Descanso"
+  },
+  {
    "dia": "LUN",
    "fecha": "30/11",
    "hoy": false,
@@ -41,20 +55,6 @@
    "hoy": false,
    "tipo": "directo",
    "texto": "Directo"
-  },
-  {
-   "dia": "SÁB",
-   "fecha": "28/11",
-   "hoy": true,
-   "tipo": "directo",
-   "texto": "Directo"
-  },
-  {
-   "dia": "DOM",
-   "fecha": "29/11",
-   "hoy": false,
-   "tipo": "descanso",
-   "texto": "Descanso"
   }
  ]
 }
