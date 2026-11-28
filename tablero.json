@@ -1,5 +1,5 @@
 {
- "actualizado": 1795840585,
+ "actualizado": 1795842445,
  "sugerencias": [],
  "mvp": {
   "nombre": "alcoholizamedia",
@@ -35,6 +35,12 @@
    "insignia": "Habitante de la 404"
   },
   {
+   "nombre": "fanggames1",
+   "racha": 7,
+   "total": 8,
+   "insignia": "Habitante de la 404"
+  },
+  {
    "nombre": "Rodriguez117",
    "racha": 7,
    "total": 7,
@@ -57,22 +63,16 @@
    "racha": 3,
    "total": 3,
    "insignia": "Señal estable"
-  },
-  {
-   "nombre": "Caadzy",
-   "racha": 2,
-   "total": 6,
-   "insignia": ""
   }
  ],
  "top_mes": [
   {
    "nombre": "MAURICIOFARFANREZA",
-   "pts": 672
+   "pts": 694
   },
   {
    "nombre": "alcoholizamedia",
-   "pts": 608
+   "pts": 630
   },
   {
    "nombre": "Renzo_Marrero",
@@ -80,11 +80,11 @@
   },
   {
    "nombre": "Vick_Aguirre",
-   "pts": 293
+   "pts": 318
   },
   {
    "nombre": "MorgilCharlotte",
-   "pts": 215
+   "pts": 238
   }
  ],
  "cumples": [],
