@@ -140,7 +140,7 @@ ol.tabla li{counter-increment:t}
 ol.tabla li span::before{content:counter(t) ". ";font-weight:700;color:var(--marca)}
 .tabla li b{flex:none;font:400 1.05rem var(--f-titulo);color:var(--tinta)}
 .tabla li small{font-size:.75rem;color:var(--marca)}
-.fieles .nota{margin-top:10px;font-size:.8rem;color:#3a1566}
+.fieles .nota{position:static;width:auto;height:auto;border-radius:0;display:block;place-items:initial;text-align:left;background:none;border:0;box-shadow:none;text-shadow:none;transform:none;font-family:inherit;margin-top:10px;font-size:.8rem;color:#3a1566}   /* 27 nov 2026: en Fieles no es el sello redondo de las reseñas */
 @media (max-width:760px){.fieles{grid-template-columns:1fr}}
 /* Juega con Lumi / Monedas de Lumi y las chibis (21 nov 2026) */
 .lumi-juegos{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:34px;align-items:start}

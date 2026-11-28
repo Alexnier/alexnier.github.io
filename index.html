@@ -217,13 +217,15 @@
  <h2><span class="cinta mor">Fieles del chat <small>常連</small></span><img class="chibi-titulo" src="img/chibi-v-guino-1.webp" alt="" loading="lazy"></h2>
  <!-- 21 nov 2026: tablero.json = GET :8765/tablero del bot (integrations/comunidad.tablero): rachas, top del mes, cumpleaños del
       mes y la votación del próximo juego. Lo baja la PC cada 30 min (~/.local/bin/tablero-pagina.sh, timer de usuario
-      «tablero-pagina») y lo sube solo si cambió. Si no hay datos, la sección no sale. -->
+      «tablero-pagina») y lo sube solo si cambió. Si no hay datos, la sección no sale.
+      27 nov 2026: también el MVP del último directo (bajo Rachas) y, si no hay votación abierta, los juegos más pedidos con
+      «!sugerir» en el chat (tablero.json → mvp, sugerencias). -->
  <p class="intro">Los que no se pierden un directo. Las rachas cuentan directos seguidos; los puntos del mes se ganan platicando y jugando con Lumi.</p>
  <div class="fieles">
-  <div class="papel ficha" id="f-rachas"><h3>Rachas</h3><ol class="tabla" id="f-rachas-l"></ol></div>
+  <div class="papel ficha" id="f-rachas"><h3>Rachas</h3><ol class="tabla" id="f-rachas-l"></ol><p class="nota" id="f-mvp"></p></div>
   <div class="papel ficha" id="f-mes"><h3>Top de <span id="f-mes-n">este mes</span></h3><ol class="tabla" id="f-mes-l"></ol>
    <p class="nota" id="f-cumples"></p></div>
-  <div class="papel ficha" id="f-voto"><h3>Vota el próximo juego</h3><ul class="tabla votos" id="f-voto-l"></ul><p class="nota" id="f-voto-n">En el chat del directo: <b>!voto</b> y el número.</p></div>
+  <div class="papel ficha" id="f-voto"><h3 id="f-voto-t">Vota el próximo juego</h3><ul class="tabla votos" id="f-voto-l"></ul><p class="nota" id="f-voto-n">En el chat del directo: <b>!voto</b> y el número.</p></div>
  </div>
 </section>
 
@@ -378,7 +380,8 @@
       const b = document.createElement('b'); b.textContent = der; li.append(a, b); if (extra) { const s = document.createElement('small'); s.textContent = extra; a.append(' ', s); } ul.appendChild(li); };
     const R = document.getElementById('f-rachas-l');
     (t.rachas || []).forEach(r => fila(R, r.nombre, r.racha + ' seguidos', r.insignia));
-    if (!(t.rachas || []).length) document.getElementById('f-rachas').hidden = true; else algo = true;
+    if (t.mvp && t.mvp.nombre) document.getElementById('f-mvp').textContent = '⭐ MVP del último directo: ' + t.mvp.nombre + (t.mvp.juego ? ' (' + t.mvp.juego + ')' : '');
+    if (!(t.rachas || []).length && !(t.mvp && t.mvp.nombre)) document.getElementById('f-rachas').hidden = true; else algo = true;
     document.getElementById('f-mes-n').textContent = t.mes || 'este mes';
     const M = document.getElementById('f-mes-l'); (t.top_mes || []).forEach(e => fila(M, e.nombre, e.pts + ' pts'));
     const cs = t.cumples || []; document.getElementById('f-cumples').textContent = cs.length ? '🎂 Cumplen este mes: ' + cs.map(c => c.nombre + ' (' + c.dia + ')').join(', ') : '';
@@ -386,6 +389,11 @@
     const v = t.votacion || {}, V = document.getElementById('f-voto-l');
     if (v.activa) { (v.opciones || []).forEach((o, i) => fila(V, (i + 1) + '. ' + o.texto, o.votos + (o.votos === 1 ? ' voto' : ' votos'))); algo = true; }
     else if (v.ganador) { fila(V, 'Ganó: ' + v.ganador, '🏆'); document.getElementById('f-voto-n').textContent = 'La votación ya cerró.'; algo = true; }
+    else if ((t.sugerencias || []).length) {   /* 27 nov 2026: sin votación, los más pedidos con !sugerir */
+      document.getElementById('f-voto-t').textContent = 'Juegos más pedidos';
+      t.sugerencias.forEach(s => fila(V, s.juego, s.votos + (s.votos === 1 ? ' lo pide' : ' lo piden')));
+      document.getElementById('f-voto-n').innerHTML = 'Sugiere el tuyo en el chat: <b>!sugerir</b> y el juego.'; algo = true;
+    }
     else document.getElementById('f-voto').hidden = true;
     if (algo) document.getElementById('fieles').hidden = false;
   } catch (e) {}
