@@ -1,5 +1,5 @@
 {
- "actualizado": 1795836865,
+ "actualizado": 1795838725,
  "sugerencias": [],
  "mvp": {
   "nombre": "alcoholizamedia",
@@ -35,6 +35,12 @@
    "insignia": "Habitante de la 404"
   },
   {
+   "nombre": "Rodriguez117",
+   "racha": 7,
+   "total": 7,
+   "insignia": "Habitante de la 404"
+  },
+  {
    "nombre": "Vick_Aguirre",
    "racha": 4,
    "total": 8,
@@ -57,34 +63,28 @@
    "racha": 2,
    "total": 6,
    "insignia": ""
-  },
-  {
-   "nombre": "IHombreLibreI",
-   "racha": 2,
-   "total": 4,
-   "insignia": ""
   }
  ],
  "top_mes": [
   {
    "nombre": "MAURICIOFARFANREZA",
-   "pts": 647
+   "pts": 666
+  },
+  {
+   "nombre": "alcoholizamedia",
+   "pts": 575
   },
   {
    "nombre": "Renzo_Marrero",
    "pts": 552
   },
   {
-   "nombre": "alcoholizamedia",
-   "pts": 538
-  },
-  {
    "nombre": "Vick_Aguirre",
-   "pts": 221
+   "pts": 260
   },
   {
-   "nombre": "FelipeFuentesM",
-   "pts": 179
+   "nombre": "MorgilCharlotte",
+   "pts": 193
   }
  ],
  "cumples": [],
