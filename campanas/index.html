@@ -12,7 +12,8 @@
         &tam=1             tamaño (0.5 a 2)
         &prueba=1          enseña la campaña activa (o la primera) todo el tiempo, para acomodarla en OBS
         &estilo=neutral    (por defecto) tarjeta sobria con el color de la campaña
-        &estilo=lumi       «Canal 404» del canal Alexnier: papel con tinta, cinta «Patrocina», Lumi chibi señalando
+        &estilo=lumi       «Canal 404» del canal Alexnier (28 nov 2026 rehecho): placa con el logo, título de una línea, mensaje,
+                           botón con el enlace, cinta «Patrocina · スポンサー», CH-404, Lumi señalando y barra de tiempo (dura_seg)
         &estilo=ge         Game Effect: negro y naranja #F5812B, Barlow Condensed, sin morado (revista/DESIGN.md)
      En la campaña: "logo_claro" (logo para fondo claro, estilo lumi) y "logo_oscuro" (para fondo oscuro, estilo ge), en arte/.
      QUÉ HACE: lee campanas.json cada REVISAR_MIN minutos. Una campaña sale SOLO si hoy está entre "inicio" y "fin", es uno de
@@ -23,7 +24,7 @@
      Lumi cuenta impresiones y, si el canal está en "canales_youtube", cuánta gente lo veía en ese momento (vistas estimadas).
      Quién manda: campanas.json (lo edita Alex). El arte va en campanas/arte/ (PNG o WebP, idealmente 1200×300). -->
 <meta name="viewport" content="width=1920">
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@700&family=Barlow+Condensed:wght@300;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&family=Barlow+Condensed:wght@300;600;700&family=Zen+Kaku+Gothic+New:wght@900&display=swap" rel="stylesheet">
 <style>
 html,body{margin:0;width:100%;height:100%;background:transparent;overflow:hidden;font-family:system-ui,"Segoe UI",sans-serif}
 #c{position:absolute;opacity:0;transform:translateY(30px) scale(.96);transition:opacity .5s,transform .5s;transform-origin:bottom right}
@@ -36,15 +37,52 @@ html,body{margin:0;width:100%;height:100%;background:transparent;overflow:hidden
 .tarjeta b{display:block;font-size:calc(34px*var(--tam));line-height:1.05;letter-spacing:.01em}
 .tarjeta span{display:block;margin-top:6px;font-size:calc(20px*var(--tam));opacity:.92}
 .tarjeta em{display:block;margin-top:8px;font-style:normal;font-weight:700;font-size:calc(18px*var(--tam))}
-/* estilo lumi (Canal 404) */
-.lumi{display:flex;align-items:center;gap:calc(14px*var(--tam));width:calc(640px*var(--tam));padding:calc(16px*var(--tam)) calc(20px*var(--tam)) calc(16px*var(--tam)) calc(118px*var(--tam));
- background:#FFF4FE;color:#1A0B2E;border:calc(4px*var(--tam)) solid #1A0B2E;border-radius:14px;box-shadow:calc(7px*var(--tam)) calc(7px*var(--tam)) 0 #8B3FD9;position:relative}
-#c .lumi .chibi{max-width:none;max-height:none;border-radius:0;box-shadow:none;position:absolute;left:calc(-34px*var(--tam));bottom:calc(-8px*var(--tam));height:calc(170px*var(--tam));filter:drop-shadow(3px 3px 0 #1A0B2E)}
-#c .lumi .lg{flex:none;max-height:calc(64px*var(--tam));max-width:calc(210px*var(--tam));border-radius:0;box-shadow:none}
-.lumi .tx{min-width:0}.lumi b{display:block;font:400 calc(32px*var(--tam))/1 Anton,sans-serif;text-transform:uppercase}
-.lumi span{display:block;margin-top:4px;font:700 calc(16px*var(--tam))/1.3 "Space Mono",monospace;color:#3A1566}
-.lumi em{display:block;margin-top:5px;font:700 calc(15px*var(--tam)) "Space Mono",monospace;font-style:normal;color:#8B3FD9}
-.lumi+.etq{background:#1A0B2E;border-radius:4px;transform:rotate(-2deg);box-shadow:3px 3px 0 #8B3FD9;font-family:Anton,sans-serif;font-weight:400;letter-spacing:.06em;left:calc(110px*var(--tam))}
+/* estilo lumi (Canal 404) — 28 nov 2026 rehecho (Alex: «siento que está muy simple, ¿lo podemos hacer más bonito?»):
+   placa de papel con el logo, título de una línea que se ajusta solo, mensaje, botón con el enlace, cinta «PATROCINA»,
+   renglón de pantalla «CH-404 ▸ COMERCIAL», trama y kanji 広告 de fondo, Lumi más grande saliéndose del marco y barra de
+   tiempo abajo. Se mueve solo al entrar y la barra (OBS dibuja los navegadores con el procesador: nada de blur animado).
+   Colores y letras del sistema del canal (overlays/assets/sistema/marca.css): tinta #12061F, papel #FFF3FC, marca #9B4DE0,
+   morado #6B2FB0, lavanda #C46BFF, rosa #FF8AE2; Anton (títulos), Space Mono (datos), Zen Kaku (japonés). */
+#c .lumi{zoom:var(--tam);box-sizing:border-box;position:relative;width:820px;height:206px;padding:30px 26px 34px 168px;display:flex;align-items:center;gap:22px;
+ background:#FFF3FC;color:#12061F;border:4px solid #12061F;border-radius:18px;box-shadow:9px 9px 0 #6B2FB0;isolation:isolate}
+.lumi .fondo{position:absolute;inset:0;border-radius:14px;overflow:hidden;z-index:-1}
+.lumi .trama{position:absolute;right:-10px;top:-10px;width:300px;height:150px;background:radial-gradient(circle,#C46BFF 32%,transparent 35%) 0 0/14px 14px;
+ -webkit-mask:radial-gradient(ellipse 100% 100% at 100% 0,#000,transparent 70%);mask:radial-gradient(ellipse 100% 100% at 100% 0,#000,transparent 70%);opacity:.45}
+.lumi .kana{position:absolute;right:-14px;bottom:-34px;font:900 118px/1 "Zen Kaku Gothic New",sans-serif;color:transparent;-webkit-text-stroke:2px rgba(155,77,224,.13)}
+.lumi .osd{position:absolute;right:20px;top:11px;display:flex;align-items:center;gap:8px;font:700 13px/1 "Space Mono",monospace;letter-spacing:.14em;color:#6B2FB0}
+.lumi .osd i{width:9px;height:9px;border-radius:50%;background:#FF5A8A;box-shadow:0 0 6px #FF5A8A;animation:cmLate 1.4s steps(2,jump-none) infinite}
+@keyframes cmLate{50%{opacity:.2}}
+.lumi .cinta{position:absolute;left:150px;top:-22px;display:flex;align-items:baseline;gap:10px;padding:7px 16px 5px;background:linear-gradient(180deg,#B565F5,#9B4DE0);
+ color:#fff;border:3px solid #12061F;box-shadow:5px 5px 0 #12061F;transform:rotate(-3deg);font:400 21px/1 Anton,sans-serif;letter-spacing:.06em;
+ text-transform:uppercase;text-shadow:2px 2px 0 #12061F;white-space:nowrap}
+.lumi .cinta small{font:900 13px/1 "Zen Kaku Gothic New",sans-serif;letter-spacing:.1em;color:#E7C2FF;text-shadow:none}
+#c .lumi .chibi{position:absolute;left:-58px;bottom:-14px;height:250px;max-width:none;max-height:none;border-radius:0;box-shadow:none;
+ filter:drop-shadow(4px 4px 0 #12061F);transform-origin:50% 100%}
+.lumi .placa{flex:none;display:grid;place-items:center;width:200px;height:106px;padding:10px 14px;background:#fff;border:3px solid #12061F;border-radius:10px;
+ box-shadow:5px 5px 0 #C46BFF;transform:rotate(-2deg)}
+#c .lumi .placa img{max-width:100%;max-height:80px;border-radius:0;box-shadow:none}
+.lumi .placa strong{font:400 34px/1 Anton,sans-serif;text-transform:uppercase;text-align:center}
+.lumi .tx{min-width:0;flex:1;display:flex;flex-direction:column;align-items:flex-start;gap:7px}
+.lumi .tit{display:block;width:100%;font:400 40px/1.02 Anton,sans-serif;text-transform:uppercase;white-space:nowrap;letter-spacing:.005em}
+.lumi .msg{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font:700 16px/1.35 "Space Mono",monospace;color:#3A1566}
+.lumi .cta{display:inline-flex;align-items:center;gap:9px;margin-top:3px;padding:7px 14px 6px 11px;background:#12061F;color:#fff;border-radius:7px;
+ box-shadow:4px 4px 0 #9B4DE0;font:700 16px/1 "Space Mono",monospace;letter-spacing:.02em}
+.lumi .cta em{font-style:normal}
+.lumi .cta b{display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:#FF8AE2;color:#12061F;font-size:10px}
+.lumi .barra{position:absolute;left:168px;right:26px;bottom:11px;height:6px;border-radius:3px;background:#E7C2FF;overflow:hidden}
+.lumi .barra i{display:block;height:100%;background:linear-gradient(90deg,#9B4DE0,#FF8AE2);transform-origin:left;animation:cmBarra var(--dura,25s) linear forwards}
+@keyframes cmBarra{from{transform:scaleX(1)}to{transform:scaleX(0)}}
+/* entrada (solo una vez por aparición) */
+#c.on .lumi{animation:cmEntra .55s cubic-bezier(.2,1.25,.4,1) both}
+#c.on .lumi .chibi{animation:cmLumi .6s .18s cubic-bezier(.2,1.5,.4,1) both}
+#c.on .lumi .cinta{animation:cmCinta .5s .3s cubic-bezier(.2,1.4,.4,1) both}
+#c.on .lumi .placa{animation:cmPlaca .5s .22s cubic-bezier(.2,1.3,.4,1) both}
+@keyframes cmEntra{from{opacity:0;transform:translateX(-46px) rotate(-1.5deg)}}
+@keyframes cmLumi{from{opacity:0;transform:translateY(40px) scale(.82) rotate(-6deg)}}
+@keyframes cmCinta{from{opacity:0;transform:rotate(-12deg) translateY(-10px) scale(.9)}}
+@keyframes cmPlaca{from{opacity:0;transform:rotate(-8deg) scale(.9)}}
+.prueba .lumi .barra i{animation-iteration-count:infinite}
+#c.abajo-izq .lumi,#c.arriba-izq .lumi{margin-left:64px}   /* que Lumi no quede cortada en la orilla */
 /* estilo ge (Game Effect) */
 .ge{display:flex;align-items:center;gap:calc(18px*var(--tam));width:calc(620px*var(--tam));padding:calc(16px*var(--tam)) calc(22px*var(--tam));background:#0A0A0A;color:#F3EBDD;
  border-left:calc(8px*var(--tam)) solid #F5812B;border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.5)}
@@ -66,6 +104,7 @@ const c = document.getElementById('c'), ESTILO = ['lumi', 'ge'].includes(q.get('
 c.className = ['arriba-izq', 'arriba-der', 'abajo-izq', 'abajo-der', 'abajo-centro'].includes(q.get('pos')) ? q.get('pos') : 'abajo-der';
 document.body.style.setProperty('--tam', Math.min(2, Math.max(.5, parseFloat(q.get('tam')) || 1)));
 let campanas = [], mostrando = null;
+if (PRUEBA) document.body.classList.add('prueba');
 
 /* fecha y hora en la zona del Pacífico de México */
 function ahoraPac() {
@@ -91,7 +130,28 @@ function pintar(k) {
   c.innerHTML = '';
   const etq = document.createElement('div'); etq.className = 'etq'; etq.textContent = k.etiqueta || (ESTILO === 'lumi' ? 'Patrocina' : 'Patrocinado');
   if (k.imagen) { const im = document.createElement('img'); im.src = 'arte/' + k.imagen; im.alt = k.marca || ''; c.append(im); }
-  else if (ESTILO !== 'neutral') {   /* 27 nov 2026: estilos del canal (lumi) y de Game Effect (ge) */
+  else if (ESTILO === 'lumi') {   /* 28 nov 2026: Canal 404 rehecho (ver CSS «estilo lumi») */
+    const t = document.createElement('div'); t.className = 'lumi'; t.style.setProperty('--dura', (k.dura_seg || 20) + 's');
+    const logo = k.logo_claro || k.logo_oscuro;
+    t.innerHTML = '<div class="fondo"><div class="trama"></div><div class="kana">広告</div></div>'
+      + '<img class="chibi" src="arte/lumi-senala.webp" alt="">'
+      + '<div class="cinta">' + (k.etiqueta ? '' : 'Patrocina') + '<small>スポンサー</small></div>'
+      + '<div class="osd"><i></i>CH-404 ▸ COMERCIAL</div>'
+      + '<div class="placa">' + (logo ? '<img alt="">' : '<strong></strong>') + '</div>'
+      + '<div class="tx"><b class="tit"></b><span class="msg"></span>' + (k.enlace ? '<span class="cta"><b>▶</b><em></em></span>' : '') + '</div>'
+      + '<div class="barra"><i></i></div>';
+    if (k.etiqueta) t.querySelector('.cinta').prepend(k.etiqueta);
+    if (logo) { const im = t.querySelector('.placa img'); im.src = 'arte/' + logo; im.alt = k.marca || ''; }
+    else t.querySelector('.placa strong').textContent = k.marca || '';
+    t.querySelector('.tit').textContent = k.titulo || k.marca || '';
+    t.querySelector('.msg').textContent = k.mensaje || '';
+    if (k.enlace) t.querySelector('.cta em').textContent = k.enlace;
+    c.append(t);
+    ajustar(t.querySelector('.tit'));
+    if (document.fonts) document.fonts.ready.then(() => ajustar(t.querySelector('.tit')));
+    return;   /* la cinta ya dice «Patrocina»: sin la etiqueta de abajo */
+  }
+  else if (ESTILO !== 'neutral') {   /* 27 nov 2026: estilo de Game Effect (ge) */
     const t = document.createElement('div'); t.className = ESTILO;
     const logo = ESTILO === 'lumi' ? (k.logo_claro || k.logo_oscuro) : (k.logo_oscuro || k.logo_claro);
     t.innerHTML = (ESTILO === 'lumi' ? '<img class="chibi" src="arte/lumi-senala.webp" alt="">' : '') + (logo ? '<img class="lg" alt="">' : '') + '<div class="tx"><b></b><span></span><em></em></div>';
@@ -105,6 +165,11 @@ function pintar(k) {
     t.querySelector('span').textContent = k.mensaje || ''; t.querySelector('em').textContent = k.enlace || ''; c.append(t);
   }
   c.append(etq);
+}
+/* 28 nov 2026: el título en UNA línea: baja la letra hasta que quepa (de 40 a 24 px) */
+function ajustar(el) {
+  if (!el) return; let s = 40; el.style.fontSize = s + 'px';
+  while (el.scrollWidth > el.clientWidth && s > 24) { s -= 1; el.style.fontSize = s + 'px'; }
 }
 function tick() {
   const a = ahoraPac(), activas = campanas.filter(k => vigente(k, a));
