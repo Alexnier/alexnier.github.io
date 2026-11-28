@@ -19,6 +19,8 @@
      sus "dias", la hora está dentro de "horas" (zona del Pacífico de México) y el canal está en "canales" ("*" = todos).
      Dentro de ese horario aparece cada "cada_min" minutos durante "dura_seg" segundos, sincronizado con el reloj (a todos
      los streamers les sale al mismo tiempo). Fuera de campaña la fuente queda TRANSPARENTE y vacía (no enseña nada).
+     VISTAS (27 nov 2026): cada vez que una tarjeta sale (no en ?prueba=1) avisa a VISTAS con la campaña y el canal; el bot de
+     Lumi cuenta impresiones y, si el canal está en "canales_youtube", cuánta gente lo veía en ese momento (vistas estimadas).
      Quién manda: campanas.json (lo edita Alex). El arte va en campanas/arte/ (PNG o WebP, idealmente 1200×300). -->
 <meta name="viewport" content="width=1920">
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@700&family=Barlow+Condensed:wght@300;600;700&display=swap" rel="stylesheet">
@@ -56,6 +58,7 @@ html,body{margin:0;width:100%;height:100%;background:transparent;overflow:hidden
 <div id="c"></div>
 <script>
 const REVISAR_MIN = 5;                       /* cada cuánto relee campanas.json */
+const VISTAS = 'https://lumichan.tail13f4d9.ts.net/campanas/visto';   /* 27 nov 2026: avisa cada aparición (bot: apoyos.py §11); en modo prueba no */
 const ZONA = 'America/Tijuana';
 const DIAS = ['dom', 'lun', 'mar', 'mie', 'jue', 'vie', 'sab'];
 const q = new URLSearchParams(location.search), CANAL = (q.get('canal') || '').toLowerCase(), PRUEBA = q.get('prueba') === '1';
@@ -113,7 +116,8 @@ function tick() {
     const cand = activas.filter(x => seg % ((x.cada_min || 15) * 60) < (x.dura_seg || 20));
     k = cand.length ? cand[Math.floor(seg / 60) % cand.length] : null;
   }
-  if (k && k !== mostrando) { pintar(k); requestAnimationFrame(() => c.classList.add('on')); }
+  if (k && k !== mostrando) { pintar(k); requestAnimationFrame(() => c.classList.add('on'));
+    if (!PRUEBA) try { fetch(VISTAS + '?c=' + encodeURIComponent(k.id || k.marca || '') + '&canal=' + encodeURIComponent(CANAL || 'anonimo'), { mode: 'no-cors' }); } catch (e) {} }
   if (!k && mostrando) { c.classList.remove('on'); setTimeout(() => { if (!mostrando) c.innerHTML = ''; }, 600); }
   mostrando = k;
 }
