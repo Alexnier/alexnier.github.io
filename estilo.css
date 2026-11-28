@@ -154,3 +154,14 @@ ol.tabla li span::before{content:counter(t) ". ";font-weight:700;color:var(--mar
 .ficha .premio-mes{margin-top:14px;font-size:.85rem}
 .chibi-titulo{height:86px;vertical-align:middle;margin:-30px 0 -20px 14px;filter:drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 -3px 0 #fff);transform:rotate(-6deg)}
 @media (max-width:760px){.lumi-juegos{grid-template-columns:1fr}.chibi{height:110px;top:-44px}.con-chibi h3,.con-chibi>h3+p{padding-right:80px}}
+
+/* 28 nov 2026 · la semana del horario (horario.json): directo, canal amigo y descanso */
+.semana{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;margin:0 0 14px}
+.dia{padding:8px 6px 9px;text-align:center;text-decoration:none;color:inherit}
+.dia small{display:block;font:400 1.15rem/1 var(--f-titulo);letter-spacing:.04em}
+.dia b{display:block;margin-top:4px;font-size:.78rem;line-height:1.15}
+.dia i{display:block;font-style:normal;font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;margin-top:2px}
+.dia.directo{background:linear-gradient(180deg,#B565F5,var(--marca));color:#fff}
+.dia.amigo{background:linear-gradient(180deg,#FF8AE2,#E63CC8);color:#fff}
+.dia.descanso{opacity:.6}
+@media (max-width:560px){.semana{grid-template-columns:repeat(4,minmax(0,1fr))}}

@@ -1,6 +1,6 @@
 <!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ALEXNIER · Retro & Modern Gaming</title>
-<meta name="description" content="Alexnier: directos de videojuegos retro y modernos todos los días en YouTube, con Lumi. Horario, redes, tienda y la revista Game Effect.">
+<meta name="description" content="Alexnier: directos de videojuegos retro y modernos de martes a sábado en YouTube, con Lumi. Horario, redes, tienda y la revista Game Effect.">
 <meta property="og:title" content="ALEXNIER · Retro & Modern Gaming"><meta property="og:description" content="Directos todos los días a las 6:00 PM (Pacífico) en YouTube, con Lumi.">
 <meta property="og:image" content="https://alexnier.github.io/img/compartir.jpg"><meta name="theme-color" content="#0D0716">
 <link rel="icon" href="img/avatar.webp">
@@ -26,7 +26,10 @@
 </div>
 
 <section id="horario">
- <h2><span class="cinta mor">Todos los días · <span id="hora-base">6:00 PM</span> Pacífico</span></h2>
+ <h2><span class="cinta mor"><span id="dias-t">Martes a sábado</span> · <span id="hora-base">6:00 PM</span> Pacífico</span></h2>
+ <!-- 28 nov 2026: la semana (directo / canal amigo / descanso) sale de horario.json, que arma Lumi Studio (studio/pagina_horario.py)
+      con lo que manda: el banner principal de tus overlays. -->
+ <div class="semana" id="semana"></div>
  <div class="zonas" id="zonas"></div>
  <p style="margin-top:14px;font-size:.9rem">La hora de tu ciudad se calcula sola (con horario de verano).</p>
  <!-- 20 nov 2026: directo especial (especial.json; lo escribe Lumi Studio → Overlays de OBS → «Directo especial» y lo sube solo) -->
@@ -339,6 +342,11 @@
 <footer><span>© 2026 ALEXNIER · Retro &amp; Modern Gaming</span><span><a href="patrocinios.html">Patrocinios</a><a href="terminos.html">Términos</a><a href="privacidad.html">Privacidad</a><a href="https://linktr.ee/Alexnier">Contacto</a></span></footer>
 </div>
 <script>
+/* 28 nov 2026: título y tira de la semana desde horario.json (Lumi Studio, studio/pagina_horario.py) */
+(async()=>{try{const h=await (await fetch('horario.json',{cache:'no-cache'})).json();
+ document.getElementById('dias-t').textContent=h.titulo;const caja=document.getElementById('semana');
+ caja.innerHTML=h.semana.map(d=>`<${d.enlace?'a href="'+d.enlace+'" target="_blank" rel="noopener"':'div'} class="dia papel ${d.tipo}"><small>${d.dia}</small><b>${d.texto}</b>${d.nota?`<i>${d.nota}</i>`:''}</${d.enlace?'a':'div'}>`).join('');
+}catch(e){}})();
 /* El horario en varias ciudades y en la del visitante, desde la hora base (6:00 PM en Tijuana = Pacífico de México). */
 (function(){
  const BASE={h:18,m:0,zona:"America/Tijuana"};

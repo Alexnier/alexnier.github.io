@@ -1,0 +1,46 @@
+{
+ "titulo": "Martes a sábado",
+ "base": {
+  "h": 18,
+  "m": 0
+ },
+ "semana": [
+  {
+   "dia": "LUN",
+   "tipo": "amigo",
+   "texto": "Floppy MX",
+   "nota": "Canal amigo",
+   "enlace": ""
+  },
+  {
+   "dia": "MAR",
+   "tipo": "directo",
+   "texto": "Directo"
+  },
+  {
+   "dia": "MIÉ",
+   "tipo": "directo",
+   "texto": "Directo"
+  },
+  {
+   "dia": "JUE",
+   "tipo": "directo",
+   "texto": "Directo"
+  },
+  {
+   "dia": "VIE",
+   "tipo": "directo",
+   "texto": "Directo"
+  },
+  {
+   "dia": "SÁB",
+   "tipo": "directo",
+   "texto": "Directo"
+  },
+  {
+   "dia": "DOM",
+   "tipo": "descanso",
+   "texto": "Descanso"
+  }
+ ]
+}
