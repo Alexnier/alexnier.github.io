@@ -13,7 +13,9 @@
         &prueba=1          enseña la campaña activa (o la primera) todo el tiempo, para acomodarla en OBS
         &estilo=neutral    (por defecto) tarjeta sobria con el color de la campaña
         &estilo=lumi       «Canal 404» del canal Alexnier (28 nov 2026 rehecho): placa con el logo, título de una línea, mensaje,
-                           botón con el enlace, cinta «Patrocina · スポンサー», CH-404, Lumi señalando y barra de tiempo (dura_seg)
+                           botón con el enlace, cinta «Patrocina · スポンサー», CH-404, Lumi señalando y barra de tiempo (dura_seg);
+                           "qr" (imagen en arte/, p. ej. con qrencode) pone el QR con «ESCANEA»; "lumi_dice" el globo de Lumi
+                           (por defecto «¡Chécalo!»; "" lo quita)
         &estilo=ge         Game Effect: negro y naranja #F5812B, Barlow Condensed, sin morado (revista/DESIGN.md)
      En la campaña: "logo_claro" (logo para fondo claro, estilo lumi) y "logo_oscuro" (para fondo oscuro, estilo ge), en arte/.
      QUÉ HACE: lee campanas.json cada REVISAR_MIN minutos. Una campaña sale SOLO si hoy está entre "inicio" y "fin", es uno de
@@ -83,6 +85,34 @@ html,body{margin:0;width:100%;height:100%;background:transparent;overflow:hidden
 @keyframes cmPlaca{from{opacity:0;transform:rotate(-8deg) scale(.9)}}
 .prueba .lumi .barra i{animation-iteration-count:infinite}
 #c.abajo-izq .lumi,#c.arriba-izq .lumi{margin-left:64px}   /* que Lumi no quede cortada en la orilla */
+/* 28 nov 2026 (2) · Alex: «¿lo puedes mejorar más?»: QR del patrocinador (campo "qr"), título con relieve de la marca,
+   globo de Lumi (campo "lumi_dice"; por defecto «¡Chécalo!»), visor en las esquinas del logo y un destello al entrar. */
+#c .lumi.con-qr{width:960px}
+.lumi.con-qr .osd{right:150px}
+.lumi.con-qr .barra{right:150px}
+.lumi .tit{text-shadow:1px 1px 0 #C46BFF,2px 2px 0 #C46BFF,3px 3px 0 #9B4DE0,4px 4px 0 #6B2FB0;padding:0 6px 4px 0}
+.lumi .placa{position:relative}
+.lumi .visor i{position:absolute;width:18px;height:18px;border:4px solid #9B4DE0}
+.lumi .visor i:nth-child(1){left:-11px;top:-11px;border-right:0;border-bottom:0}
+.lumi .visor i:nth-child(2){right:-11px;top:-11px;border-left:0;border-bottom:0}
+.lumi .visor i:nth-child(3){left:-11px;bottom:-11px;border-right:0;border-top:0}
+.lumi .visor i:nth-child(4){right:-11px;bottom:-11px;border-left:0;border-top:0}
+.lumi .qr{flex:none;position:relative;display:flex;flex-direction:column;align-items:center;gap:5px;padding:9px 9px 7px;background:#fff;
+ border:3px solid #12061F;border-radius:10px;box-shadow:5px 5px 0 #FF8AE2;transform:rotate(2.5deg)}
+#c .lumi .qr img{width:86px;height:86px;max-width:none;max-height:none;border-radius:0;box-shadow:none;image-rendering:pixelated}
+.lumi .qr span{font:400 14px/1 Anton,sans-serif;letter-spacing:.14em;color:#12061F}
+.lumi .globo{position:absolute;left:-6px;top:-66px;padding:8px 12px 6px;background:#fff;border:3px solid #12061F;border-radius:12px;
+ box-shadow:4px 4px 0 #FF8AE2;font:400 19px/1 Anton,sans-serif;letter-spacing:.03em;text-transform:uppercase;color:#12061F;transform:rotate(-6deg);white-space:nowrap;z-index:2}
+.lumi .globo::after{content:"";position:absolute;left:auto;right:26px;bottom:-12px;width:14px;height:14px;background:#fff;border:3px solid #12061F;
+ border-top:0;border-left:0;transform:rotate(45deg) skew(10deg,10deg)}
+.lumi .brillo{position:absolute;top:-20px;bottom:-20px;left:0;width:110px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.85),transparent);
+ transform:translateX(-160px) skewX(-18deg);opacity:0}
+#c.on .lumi .brillo{animation:cmBrillo .9s .55s ease-out both}
+@keyframes cmBrillo{0%{opacity:1;transform:translateX(-160px) skewX(-18deg)}100%{opacity:1;transform:translateX(1000px) skewX(-18deg)}}
+#c.on .lumi .globo{animation:cmGlobo .45s .75s cubic-bezier(.2,1.6,.4,1) both}
+@keyframes cmGlobo{from{opacity:0;transform:rotate(-14deg) scale(.4) translateY(14px)}}
+#c.on .lumi .qr{animation:cmQr .5s .4s cubic-bezier(.2,1.3,.4,1) both}
+@keyframes cmQr{from{opacity:0;transform:rotate(12deg) scale(.85)}}
 /* estilo ge (Game Effect) */
 .ge{display:flex;align-items:center;gap:calc(18px*var(--tam));width:calc(620px*var(--tam));padding:calc(16px*var(--tam)) calc(22px*var(--tam));background:#0A0A0A;color:#F3EBDD;
  border-left:calc(8px*var(--tam)) solid #F5812B;border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.5)}
@@ -133,13 +163,17 @@ function pintar(k) {
   else if (ESTILO === 'lumi') {   /* 28 nov 2026: Canal 404 rehecho (ver CSS «estilo lumi») */
     const t = document.createElement('div'); t.className = 'lumi'; t.style.setProperty('--dura', (k.dura_seg || 20) + 's');
     const logo = k.logo_claro || k.logo_oscuro;
-    t.innerHTML = '<div class="fondo"><div class="trama"></div><div class="kana">広告</div></div>'
+    t.innerHTML = '<div class="fondo"><div class="trama"></div><div class="kana">広告</div><div class="brillo"></div></div>'
       + '<img class="chibi" src="arte/lumi-senala.webp" alt="">'
+      + (k.lumi_dice === '' ? '' : '<div class="globo"></div>')
       + '<div class="cinta">' + (k.etiqueta ? '' : 'Patrocina') + '<small>スポンサー</small></div>'
       + '<div class="osd"><i></i>CH-404 ▸ COMERCIAL</div>'
-      + '<div class="placa">' + (logo ? '<img alt="">' : '<strong></strong>') + '</div>'
+      + '<div class="placa"><div class="visor"><i></i><i></i><i></i><i></i></div>' + (logo ? '<img alt="">' : '<strong></strong>') + '</div>'
       + '<div class="tx"><b class="tit"></b><span class="msg"></span>' + (k.enlace ? '<span class="cta"><b>▶</b><em></em></span>' : '') + '</div>'
+      + (k.qr ? '<div class="qr"><img alt=""><span>ESCANEA</span></div>' : '')
       + '<div class="barra"><i></i></div>';
+    if (k.qr) { t.classList.add('con-qr'); t.querySelector('.qr img').src = 'arte/' + k.qr; }
+    if (k.lumi_dice !== '') t.querySelector('.globo').textContent = k.lumi_dice || '¡Chécalo!';
     if (k.etiqueta) t.querySelector('.cinta').prepend(k.etiqueta);
     if (logo) { const im = t.querySelector('.placa img'); im.src = 'arte/' + logo; im.alt = k.marca || ''; }
     else t.querySelector('.placa strong').textContent = k.marca || '';
