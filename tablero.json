@@ -1,29 +1,29 @@
 {
- "actualizado": 1795851576,
+ "actualizado": 1795853376,
  "sugerencias": [],
  "mvp": {
   "nombre": "alcoholizamedia",
-  "juego": "Mischief Makers",
-  "fecha": "2026-11-25"
+  "juego": "Phantom Blade Zero",
+  "fecha": "2026-11-27"
  },
  "canal": {
-  "suscriptores": 592,
-  "vistas": 110281,
+  "suscriptores": 593,
+  "vistas": 110296,
   "videos": 422,
-  "mensajes_directo": 836,
-  "horas_directo": 4.2,
-  "personas_mes": 43
+  "mensajes_directo": 883,
+  "horas_directo": 4.3,
+  "personas_mes": 38
  },
  "mes": "noviembre",
  "rachas": [
   {
-   "nombre": "MAURICIOFARFANREZA",
+   "nombre": "alcoholizamedia",
    "racha": 9,
    "total": 9,
    "insignia": "Habitante de la 404"
   },
   {
-   "nombre": "alcoholizamedia",
+   "nombre": "MAURICIOFARFANREZA",
    "racha": 9,
    "total": 9,
    "insignia": "Habitante de la 404"
@@ -47,13 +47,13 @@
    "insignia": "Habitante de la 404"
   },
   {
-   "nombre": "Vick_Aguirre",
+   "nombre": "FelipeFuentesM",
    "racha": 4,
    "total": 8,
    "insignia": "Señal estable"
   },
   {
-   "nombre": "FelipeFuentesM",
+   "nombre": "Vick_Aguirre",
    "racha": 4,
    "total": 8,
    "insignia": "Señal estable"
