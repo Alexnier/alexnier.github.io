@@ -1,5 +1,5 @@
 {
- "actualizado": 1795835065,
+ "actualizado": 1795836865,
  "sugerencias": [],
  "mvp": {
   "nombre": "alcoholizamedia",
@@ -18,57 +18,57 @@
  "rachas": [
   {
    "nombre": "MAURICIOFARFANREZA",
-   "racha": 8,
-   "total": 8,
+   "racha": 9,
+   "total": 9,
    "insignia": "Habitante de la 404"
   },
   {
    "nombre": "alcoholizamedia",
+   "racha": 9,
+   "total": 9,
+   "insignia": "Habitante de la 404"
+  },
+  {
+   "nombre": "MorgilCharlotte",
    "racha": 8,
    "total": 8,
    "insignia": "Habitante de la 404"
   },
   {
-   "nombre": "MorgilCharlotte",
-   "racha": 7,
-   "total": 7,
-   "insignia": "Habitante de la 404"
-  },
-  {
-   "nombre": "fanggames1",
-   "racha": 6,
-   "total": 7,
-   "insignia": "Habitante de la 404"
-  },
-  {
-   "nombre": "Rodriguez117",
-   "racha": 6,
-   "total": 6,
-   "insignia": "Habitante de la 404"
-  },
-  {
    "nombre": "Vick_Aguirre",
-   "racha": 3,
-   "total": 7,
+   "racha": 4,
+   "total": 8,
    "insignia": "Señal estable"
   },
   {
    "nombre": "FelipeFuentesM",
-   "racha": 3,
-   "total": 7,
+   "racha": 4,
+   "total": 8,
    "insignia": "Señal estable"
   },
   {
-   "nombre": "Renzo_Marrero",
+   "nombre": "Axes_1138",
    "racha": 3,
-   "total": 6,
+   "total": 3,
    "insignia": "Señal estable"
+  },
+  {
+   "nombre": "Caadzy",
+   "racha": 2,
+   "total": 6,
+   "insignia": ""
+  },
+  {
+   "nombre": "IHombreLibreI",
+   "racha": 2,
+   "total": 4,
+   "insignia": ""
   }
  ],
  "top_mes": [
   {
    "nombre": "MAURICIOFARFANREZA",
-   "pts": 635
+   "pts": 647
   },
   {
    "nombre": "Renzo_Marrero",
@@ -76,15 +76,15 @@
   },
   {
    "nombre": "alcoholizamedia",
-   "pts": 522
+   "pts": 538
   },
   {
    "nombre": "Vick_Aguirre",
-   "pts": 192
+   "pts": 221
   },
   {
-   "nombre": "fanggames1",
-   "pts": 166
+   "nombre": "FelipeFuentesM",
+   "pts": 179
   }
  ],
  "cumples": [],
