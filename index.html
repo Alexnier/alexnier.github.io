@@ -345,7 +345,7 @@
 /* 28 nov 2026: título y tira de la semana desde horario.json (Lumi Studio, studio/pagina_horario.py) */
 (async()=>{try{const h=await (await fetch('horario.json',{cache:'no-cache'})).json();
  document.getElementById('dias-t').textContent=h.titulo;const caja=document.getElementById('semana');
- caja.innerHTML=h.semana.map(d=>`<${d.enlace?'a href="'+d.enlace+'" target="_blank" rel="noopener"':'div'} class="dia papel ${d.tipo}"><small>${d.dia}</small><b>${d.texto}</b>${d.nota?`<i>${d.nota}</i>`:''}</${d.enlace?'a':'div'}>`).join('');
+ caja.innerHTML=h.semana.map(d=>`<${d.enlace?'a href="'+d.enlace+'" target="_blank" rel="noopener"':'div'} class="dia papel ${d.tipo}${d.hoy?' hoy':''}"><small>${d.dia}${d.fecha?` <em>${d.fecha}</em>`:''}</small><b>${d.texto}</b>${d.nota?`<i>${d.nota}${d.enlace?' ↗':''}</i>`:''}</${d.enlace?'a':'div'}>`).join('');
 }catch(e){}})();
 /* El horario en varias ciudades y en la del visitante, desde la hora base (6:00 PM en Tijuana = Pacífico de México). */
 (function(){

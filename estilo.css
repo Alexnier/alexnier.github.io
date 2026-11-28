@@ -165,3 +165,6 @@ ol.tabla li span::before{content:counter(t) ". ";font-weight:700;color:var(--mar
 .dia.amigo{background:linear-gradient(180deg,#FF8AE2,#E63CC8);color:#fff}
 .dia.descanso{opacity:.6}
 @media (max-width:560px){.semana{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.dia small em{font:700 .62rem/1 var(--f-dato,monospace);font-style:normal;opacity:.8;letter-spacing:0}
+.dia.hoy{outline:3px solid var(--lav-clara,#E7C2FF);outline-offset:2px}
+a.dia.amigo:hover{filter:brightness(1.08)}

@@ -7,38 +7,52 @@
  "semana": [
   {
    "dia": "LUN",
+   "fecha": "30/11",
+   "hoy": false,
    "tipo": "amigo",
    "texto": "Floppy MX",
    "nota": "Canal amigo",
-   "enlace": ""
+   "enlace": "https://www.youtube.com/@Floppy_geek"
   },
   {
    "dia": "MAR",
+   "fecha": "1/12",
+   "hoy": false,
    "tipo": "directo",
    "texto": "Directo"
   },
   {
    "dia": "MIÉ",
+   "fecha": "2/12",
+   "hoy": false,
    "tipo": "directo",
    "texto": "Directo"
   },
   {
    "dia": "JUE",
+   "fecha": "3/12",
+   "hoy": false,
    "tipo": "directo",
    "texto": "Directo"
   },
   {
    "dia": "VIE",
+   "fecha": "4/12",
+   "hoy": false,
    "tipo": "directo",
    "texto": "Directo"
   },
   {
    "dia": "SÁB",
+   "fecha": "28/11",
+   "hoy": true,
    "tipo": "directo",
    "texto": "Directo"
   },
   {
    "dia": "DOM",
+   "fecha": "29/11",
+   "hoy": false,
    "tipo": "descanso",
    "texto": "Descanso"
   }
