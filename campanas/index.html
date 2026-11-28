@@ -115,12 +115,12 @@ html,body{margin:0;width:100%;height:100%;background:transparent;overflow:hidden
 #c.on .lumi .qr{animation:cmQr .5s .4s cubic-bezier(.2,1.3,.4,1) both}
 @keyframes cmQr{from{opacity:0;transform:rotate(12deg) scale(.85)}}
 /* 28 nov 2026 (3) · Alex: «el logo se mira muy simple»: la placa se viste con la marca del patrocinador y enseña el PRODUCTO.
-   Campos: "placa_fondo" (color de la placa; con él va logo_oscuro), "placa_acento" (franja, sombra y visor), "placa_texto"
+   Campos: "placa_fondo" (color de la placa; con él va logo_oscuro), "placa_acento" (franja y sombra), "placa_texto"
    (lo que dice la franja), "portada" (imagen del producto en arte/, asomándose inclinada) y "portada_sello" (sello redondo). */
 .lumi .placa.marca{background:var(--pf);box-shadow:5px 5px 0 var(--pa);padding:12px 14px 30px;overflow:visible}
 .lumi .placa.marca .franja{position:absolute;left:0;right:0;bottom:0;padding:5px 8px 4px;background:var(--pa);color:#0A0A0A;border-radius:0 0 7px 7px;
  font:700 15px/1 "Barlow Condensed",sans-serif;letter-spacing:.12em;text-transform:uppercase;text-align:center}
-.lumi .placa.marca .visor i{border-color:var(--pa)}
+.lumi .placa.marca .visor{display:none}   /* 28 nov 2026 (Alex: «las líneas de las esquinas se ven raras»): con la placa de la marca sobran */
 .lumi .placa .portada{position:absolute;right:-82px;top:-42px;width:92px;transform:rotate(8deg);z-index:2}
 #c .lumi .placa .portada img{display:block;width:92px;max-width:none;max-height:none;border:3px solid #12061F;border-radius:4px;box-shadow:5px 5px 0 #12061F}
 .lumi .placa .sello{position:absolute;right:-14px;bottom:-12px;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;
