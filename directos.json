@@ -1,19 +1,27 @@
 [
  {
+  "id": "mp9E8FP3yNI",
+  "titulo": "Phantom Blade Zero | Superamos El Peligro CARMESÍ 🍃",
+  "juego": "Phantom Blade Zero",
+  "gancho": "Superamos El Peligro CARMESÍ 🍃",
+  "fecha": "2026-11-26",
+  "vistas": 0
+ },
+ {
   "id": "3wSOK7XM2VY",
   "titulo": "Mischief Makers | El Profesor Ha DESAPARECIDO 🚨",
   "juego": "Mischief Makers",
   "gancho": "El Profesor Ha DESAPARECIDO 🚨",
-  "fecha": "2026-11-25",
-  "vistas": 0
+  "fecha": "2026-11-26",
+  "vistas": 269
  },
  {
   "id": "CMH7GHdy9Yc",
   "titulo": "Phantom Blade Zero | El Refugio OCULTA Algo 🏕️",
   "juego": "Phantom Blade Zero",
   "gancho": "El Refugio OCULTA Algo 🏕️",
-  "fecha": "2026-11-24",
-  "vistas": 123
+  "fecha": "2026-11-26",
+  "vistas": 144
  },
  {
   "id": "7FiEUij-Yik",
@@ -21,7 +29,7 @@
   "juego": "Phantom Blade Zero",
   "gancho": "Un Paso MÁS Cerca 🗡️",
   "fecha": "2026-11-22",
-  "vistas": 200
+  "vistas": 207
  },
  {
   "id": "zHpdGw313x8",
@@ -45,7 +53,7 @@
   "juego": "Final Fantasy VII Rebirth",
   "gancho": "A un Paso del FINAL 🌌",
   "fecha": "2026-11-20",
-  "vistas": 143
+  "vistas": 145
  },
  {
   "id": "AVMYG3dqflI",
@@ -110,13 +118,5 @@
   "gancho": "Abyss Levoire: El JEFE Final 👹",
   "fecha": "2026-08-12",
   "vistas": 50
- },
- {
-  "id": "AWDruyyKWko",
-  "titulo": "Stellar Blade | Rotten Labyrinth: Un ALTAR",
-  "juego": "Stellar Blade",
-  "gancho": "Rotten Labyrinth: Un ALTAR",
-  "fecha": "2026-08-06",
-  "vistas": 171
  }
 ]
